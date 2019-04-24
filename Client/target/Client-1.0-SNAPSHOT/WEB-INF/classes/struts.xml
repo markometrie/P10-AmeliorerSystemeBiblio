@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+        
+<struts>
+    <constant name="struts.devMode" value="false" />
+    
+    
+    <package name="baseEmploye" abstract="true" extends="struts-default">
+        
+                 <interceptors>
+                <interceptor name="authEmplo" class="com.client.interceptors.EmployeAuthInterceptor"/> 
+            <interceptor-stack name="authenticatedEmplo">
+            <interceptor-ref name="authEmplo"/>
+            <interceptor-ref name="defaultStack"/>
+        </interceptor-stack>
+        </interceptors>
+        
+        
+              <!-- Resultat globaux -->
+      <global-results>
+          <result name="error">/jsp/error.jsp</result>
+          <result name="error-forbidden" type="httpheader">
+              <param name="error">403</param>
+          </result>
+      </global-results>
+        
+    </package>
+    
+                         <!--  PACKAGE DE CONFIG -->
+    
+    <package name="base" abstract="true" extends="struts-default">
+    
+            <interceptors>
+                <interceptor name="auth" class="com.client.interceptors.AuthInterceptor"/> 
+            <interceptor-stack name="authenticatedStack">
+            <interceptor-ref name="auth"/>
+            <interceptor-ref name="defaultStack"/>
+        </interceptor-stack>
+        </interceptors>
+      
+
+      <!-- Resultat globaux -->
+      <global-results>
+          <result name="error">/jsp/error.jsp</result>
+          <result name="error-forbidden" type="httpheader">
+              <param name="error">403</param>
+          </result>
+      </global-results>
+      
+    </package>
+    
+    
+                    <!--  PACKAGE PUBLIC -->
+                    
+    <package name="public" extends="base">        
+     
+        <!-- Action par défaut-->
+        <default-action-ref name="index" />
+ 
+
+        <!-- Action "index" -->
+        <action name="index">
+            <result>index.jsp</result>
+        </action>
+        
+        <!-- Action "header" -->
+        <action name="header">
+            <result>WEB-INF/jsp/_include/header.jsp</result>
+        </action>
+          
+                               <!--  CLIENT  -->
+
+        <!-- Action pour s'inscrire -->
+        <action name="addClient"
+                       class="com.client.action.AddClientAction">
+            <result>WEB-INF/jsp/addClient.jsp</result>
+        </action>
+        
+        
+       <action name="ajouterClient"
+                     class="com.client.action.AddClientAction"
+                     method="doAddClient">
+          <result name="input" >WEB-INF/jsp/addClient.jsp</result>
+          <result name="success" >WEB-INF/jsp/actu.jsp</result>
+          
+      </action>
+      
+      
+      <!-- Action pour permettre à l'utilisateur de se connecter -->
+      <action name="login" 
+                     class="com.client.action.LoginAction">
+          <result>WEB-INF/jsp/login.jsp</result>
+      </action>
+      
+      
+      <action name="doLogin"
+                     class="com.client.action.LoginAction"
+                     method="doLoginClient">
+          <result name="input" >WEB-INF/jsp/login.jsp</result>
+          <result name="success" >WEB-INF/jsp/actu.jsp</result>
+      </action>
+      
+      
+                            <!--  EMPLOYES -->
+
+      <!-- Action pour permettre des verifier les employés -->
+      <action name="employe" 
+                     class="com.client.action.GestionEmployeAction">
+          <result>WEB-INF/jsp/employe.jsp</result>
+      </action>
+       
+      <action name="doVerifEmploye"
+                     class="com.client.action.GestionEmployeAction"
+                     method="verifEmploye">
+          <result name="input" >WEB-INF/jsp/employe.jsp</result>
+          <result name="success" >WEB-INF/jsp/accueilEmploye.jsp</result>
+      </action>
+      
+    </package>
+      
+      
+      
+      
+      
+      
+      
+        
+
+                        <!--PACKAGE CLIENT-->
+    
+    <package name="private" extends="base">
+ 
+        <default-interceptor-ref name="authenticatedStack"/>
+        
+                                 <!--  CLIENT  -->
+              
+       <!-- Action pour accueil du client une fois log -->
+       <action name="accueilLog">
+          <result>WEB-INF/jsp/accueilLog.jsp</result>
+      </action>
+      
+       <!-- Action pour accéder aux actualités -->
+       <action name="actu">
+          <result>WEB-INF/jsp/actu.jsp</result>
+      </action>
+         
+                           <!-- RECHERCHE -->
+  
+        <!-- Action pour effectuer une recherche -->
+        <action name="recherche">
+            <result>WEB-INF/jsp/recherche.jsp</result>
+        </action> 
+
+               
+       <action name="listeDocument"
+                     class="com.client.action.RechercheAction">
+          <result name="success" >WEB-INF/jsp/resultRecherche.jsp</result>
+          <result name="input" >WEB-INF/jsp/recherche.jsp</result>
+      </action>
+                     
+    </package>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+                       <!--PACKAGE EMPLOYE-->
+    
+    
+    <package name="privateEmplo" extends="baseEmploye">
+        
+        <default-interceptor-ref name="authenticatedEmplo"/>
+
+                                <!--  PRETS  -->
+        
+         <!-- Action pour accéder aux prets -->
+       <action name="pret"
+                      class="com.client.action.PretAction">
+          <result name="success">WEB-INF/jsp/pret.jsp</result>
+      </action>
+      
+      
+     <action name="ajouterPret"
+                     class="com.client.action.PretAction"
+                     method="doAddPret">
+          <result name="input" >WEB-INF/jsp/addPret.jsp</result>
+          <result name="success" >WEB-INF/jsp/accueilEmploye.jsp</result>
+     </action>
+     
+     
+       <action name="addPret">
+            <result>WEB-INF/jsp/addPret.jsp</result>
+        </action> 
+        
+        
+        <action name="deletePret">
+            <result>WEB-INF/jsp/deletePret.jsp</result>
+        </action>
+        
+        <action name="supprimerPret"
+                     class="com.client.action.PretAction"
+                     method="doDeletePret">
+          <result name="input" >WEB-INF/jsp/deletePret.jsp</result>
+          <result name="success" >WEB-INF/jsp/accueilEmploye.jsp</result>
+     </action>
+      
+      
+                              <!--  BASE CLIENT  -->
+                   
+       <action name="listeClient"
+                      class="com.client.action.AddClientAction">
+          <result name="success">WEB-INF/jsp/listeClient.jsp</result>
+      </action>
+      
+      
+            
+       <!-- Action pour inscrire un employé -->
+        <action name="addUser"
+                       class="com.client.action.AddUserAction">
+            <result>WEB-INF/jsp/addUser.jsp</result>
+        </action>
+        
+        
+       <action name="ajouterEmploye"
+                     class="com.client.action.AddUserAction"
+                     method="doAddUser">
+          <result name="input" >WEB-INF/jsp/addUser.jsp</result>
+          <result name="success" >WEB-INF/jsp/accueilEmploye.jsp</result>
+      </action>
+      
+      
+        <!-- Action pour effectuer une redirection employe -->
+        <action name="accueilEmploye">
+            <result>WEB-INF/jsp/accueilEmploye.jsp</result>
+        </action> 
+        
+                        
+                                   <!-- RECHERCHE -->
+  
+        <!-- Action pour effectuer une recherche -->
+        <action name="rechercheEmploye">
+            <result>WEB-INF/jsp/rechercheEmploye.jsp</result>
+        </action> 
+
+               
+       <action name="listeDoc"
+                     class="com.client.action.RechercheAction">
+          <result name="success" >WEB-INF/jsp/resultRechercheEmploye.jsp</result>
+          <result name="input" >WEB-INF/jsp/rechercheEmploye.jsp</result>
+      </action>
+      
+       <!-- Action pour inscrire un employé -->
+        <action name="addDocument"
+                       class="com.client.action.AddDocumentAction">
+            <result>WEB-INF/jsp/addDocument.jsp</result>
+        </action>
+        
+        
+       <action name="ajouterDocument"
+                     class="com.client.action.AddDocumentAction"
+                     method="doAddDocument">
+          <result name="input" >WEB-INF/jsp/addDocument.jsp</result>
+          <result name="success" >WEB-INF/jsp/accueilEmploye.jsp</result>
+      </action>
+                 
+
+    </package>
+    
+    
+    
+</struts>

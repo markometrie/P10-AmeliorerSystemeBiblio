@@ -1,0 +1,484 @@
+
+  /**********************************************************
+                                               HEADER
+  ***********************************************************/
+
+#mainNav {
+  position: absolute;
+  border-bottom: 1px solid #e9ecef;
+  background-color: white;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+#mainNav .navbar-brand {
+  font-weight: 800;
+  color: #343a40;
+}
+
+#mainNav .navbar-toggler {
+  font-size: 12px;
+  font-weight: 800;
+  padding: 13px;
+  text-transform: uppercase;
+  color: #343a40;
+}
+
+#mainNav .navbar-nav > li.nav-item > a {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+
+  #mainNav.is-fixed {
+    /* when the user scrolls down, we hide the header right above the viewport */
+    position: fixed;
+    top: -67px;
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: -webkit-transform 0.2s;
+    transition: transform 0.2s;
+    transition: transform 0.2s, -webkit-transform 0.2s;
+    border-bottom: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  #mainNav.is-fixed .navbar-brand {
+    color: #212529;
+  }
+  #mainNav.is-fixed .navbar-brand:focus, #mainNav.is-fixed .navbar-brand:hover {
+    color: #0085A1;
+  }
+  #mainNav.is-fixed .navbar-nav > li.nav-item > a {
+    color: #212529;
+  }
+  #mainNav.is-fixed .navbar-nav > li.nav-item > a:focus, #mainNav.is-fixed .navbar-nav > li.nav-item > a:hover {
+    color: #0085A1;
+  }
+  #mainNav.is-visible {
+    /* if the user changes the scrolling direction, we show the header */
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+  
+  
+  /************************************************
+  RESPONSIVE DU MENU HEADER
+  ************************************************/
+  
+  @media only screen and (min-width: 992px) {
+  #mainNav {
+    border-bottom: 1px solid transparent;
+    background: transparent;
+  }
+  #mainNav .navbar-brand {
+    padding: 10px 20px;
+    color: #fff;
+  }
+  #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  #mainNav .navbar-nav > li.nav-item > a {
+    padding: 10px 20px;
+    color: #fff;
+  }
+  #mainNav .navbar-nav > li.nav-item > a:focus, #mainNav .navbar-nav > li.nav-item > a:hover {
+    color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  #mainNav {
+    -webkit-transition: background-color 0.2s;
+    transition: background-color 0.2s;
+    /* Force Hardware Acceleration in WebKit */
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+  }
+  }
+  
+ /*****************************************************************************************************************/
+  
+  /**********************************************************
+                                     PAGE D'ACCUEIL
+  ***********************************************************/
+  
+
+  
+  
+  /**********************************************************
+                                     PAGE LOGIN
+  ***********************************************************/
+
+  .login{
+      margin-top: auto;
+      margin-left: auto;
+  }
+  
+.titrageLog{
+    margin-top: 10%;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin-left: 35%;
+    margin-right: 0%;
+}
+
+  /**********************************************************
+                                     PAGE ADDCLIENT
+  ***********************************************************/
+  
+  .FormulaireAdd{
+    margin-top: 10%;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin-left: 40%;
+    margin-right: 0%;
+  }
+  
+  .nomInfo {
+      margin-top: 10px;
+  }
+  
+  .tableInfo{
+      margin-top: 2%;
+      border-collapse: separate;
+      border-spacing: 40px 17px;
+  }
+  
+  .label{
+      color: #080d15;
+      font-size: 12px;
+  }
+  
+
+  
+  
+    /**********************************************************
+                                     GESTION EMPLOYE
+  ***********************************************************/
+    
+  
+.MiseFormulaire{
+    margin-top: 10%;
+    margin-left: 37%;
+    margin-right: 0%;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+}
+
+
+.BoutonFormu{
+    margin-top: 3%;
+    margin-left: 41%;
+}
+
+.form-control{
+    width: 20%;
+}
+
+.BoutonFormu{
+    margin-top:3%;
+    margin-left: 0%;
+    
+}
+
+
+
+
+  /**********************************************************
+                                     PAGE ACTU
+  ***********************************************************/
+
+/********************************/
+/*       Fade Bs-carousel       */
+/********************************/
+.fade-carousel {
+    position: relative;
+    height: 100vh;
+}
+.fade-carousel .carousel-inner .item {
+    height: 100vh;
+}
+.fade-carousel .carousel-indicators > li {
+    margin: 0 2px;
+    background-color: #f39c12;
+    border-color: #f39c12;
+    opacity: .7;
+}
+.fade-carousel .carousel-indicators > li.active {
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+}
+
+/********************************/
+/*          Hero Headers        */
+/********************************/
+.hero {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0 rgba(0,0,0,.75);
+      -webkit-transform: translate3d(-50%,-50%,0);
+         -moz-transform: translate3d(-50%,-50%,0);
+          -ms-transform: translate3d(-50%,-50%,0);
+           -o-transform: translate3d(-50%,-50%,0);
+              transform: translate3d(-50%,-50%,0);
+}
+.hero h1 {
+    font-size: 6em;    
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+.fade-carousel .carousel-inner .item .hero {
+    opacity: 0;
+    -webkit-transition: 2s all ease-in-out .1s;
+       -moz-transition: 2s all ease-in-out .1s; 
+        -ms-transition: 2s all ease-in-out .1s; 
+         -o-transition: 2s all ease-in-out .1s; 
+            transition: 2s all ease-in-out .1s; 
+}
+.fade-carousel .carousel-inner .item.active .hero {
+    opacity: 1;
+    -webkit-transition: 2s all ease-in-out .1s;
+       -moz-transition: 2s all ease-in-out .1s; 
+        -ms-transition: 2s all ease-in-out .1s; 
+         -o-transition: 2s all ease-in-out .1s; 
+            transition: 2s all ease-in-out .1s;    
+}
+
+/********************************/
+/*            Overlay           */
+/********************************/
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: #080d15;
+    opacity: .7;
+}
+
+/********************************/
+/*          Custom Buttons      */
+/********************************/
+.btn.btn-lg {padding: 10px 40px;}
+.btn.btn-hero,
+.btn.btn-hero:hover,
+.btn.btn-hero:focus {
+    color: #f5f5f5;
+    background-color: #1abc9c;
+    border-color: #1abc9c;
+    outline: none;
+    margin: 20px auto;
+}
+
+/********************************/
+/*       Slides backgrounds     */
+/********************************/
+.fade-carousel .slides .slide-1, 
+.fade-carousel .slides .slide-2,
+.fade-carousel .slides .slide-3 {
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.fade-carousel .slides .slide-1 {
+  background-image: url(resources/img/1984-02.png); 
+}
+.fade-carousel .slides .slide-2 {
+  background-image: url("resources/img/nasa02.jpg");
+}
+.fade-carousel .slides .slide-3 {
+  background-image: url(https://ununsplash.imgix.net/photo-1416339276121-ba1dfa199912?q=75&fm=jpg&s=9bf9f2ef5be5cb5eee5255e7765cb327);
+}
+
+/********************************/
+/*          Media Queries       */
+/********************************/
+@media screen and (min-width: 980px){
+    .hero { width: 980px; }    
+}
+@media screen and (max-width: 640px){
+    .hero h1 { font-size: 4em; }    
+}
+
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: normal;
+}
+.marketing .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
+}
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -.05rem;
+}
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+
+  /**********************************************************
+                                     PAGE RECHERCHE
+  ***********************************************************/
+  
+  #searchbar{
+      position:relative; 
+      width:1040px; height:auto;
+      margin-top: 11%;
+     margin-left: 30%;
+  }
+
+.formulaire{
+    display:inline-block;
+}
+
+.formulaire .champ{
+    width:600px;
+    height:35px;
+}
+
+.formulaire .bouton {
+    background-image: url(resources/img/valid.jpg);
+    background-repeat: no-repeat;
+    width: 35px;
+    height: 35px;
+    padding: 0;
+}
+
+  .listeDocument{
+      margin-top: 0%;
+      margin-left: 27%
+  }
+  
+  .titreDocument {
+      margin-top: 10%;
+      margin-left: 40%;
+      font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 20px;
+  }
+  
+    .tableDocument {
+      margin-top: 2%;
+      border-collapse: separate;
+      border-spacing: 45px 25px;
+  }
+
+
+
+  /**********************************************************
+                                     PAGE PRETS
+  ***********************************************************/
+  
+  ul {
+      list-style: none;
+      margin-left: 0;
+      padding-left: 0;
+  }
+  
+  li{
+      list-style: none;
+      margin-bottom: 15px;
+  }
+  
+  
+  .tablePret {
+      margin-top: 2%;
+      border-collapse: separate;
+      border-spacing: 40px 17px;
+  }
+  
+  table {
+      border-spacing: 0px 10px;
+      border-collapse: separate;
+
+  }
+  
+  .listePret{
+      margin-top: 0%;
+      margin-left: 15%
+  }
+  
+  .titrePret {
+      margin-top: 10%;
+      margin-left: 40%;
+      font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 20px;
+  }
+  
+  .boutonPret {
+     margin-left: 45%;
+     margin-top: 2%
+      
+  }
+  
+  .boutonSupp{
+      margin-top: 1%;
+      margin-left: 44.3%;
+  }
+  
+  
+    /**********************************************************
+                                     PAGE BASE CLIENT
+  ***********************************************************/
+    
+      .titreClient {
+      margin-top: 10%;
+      margin-left: 40%;
+      font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 20px;
+  }
+  
+  .listeClient{
+      margin-top: 0%;
+      margin-left: 7%
+  }
+  
+  
+  .tableClient{
+      margin-top: 2%;
+      border-collapse: separate;
+      border-spacing: 60px 30px;
+      font-size: 14px;
+  }
+ 
