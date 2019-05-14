@@ -197,33 +197,35 @@ public class AddClientAction extends ActionSupport implements SessionAware {
       */   
         try{
             
-        if (StringUtils.isAllEmpty(pseudo)) {
-            if(StringUtils.isAllEmpty(motPasse)) {
-                if(StringUtils.isAllEmpty(email)){
-                    
-                    vResult = ActionSupport.INPUT;
-                }
-            }
-        }
-           
+                     if (!StringUtils.isAllEmpty(pseudo, motPasse, email)) {
+                         
+                     ClientResponse clientresponse = port.addClient(refBibliotheque, nom, prenom,sexe,pseudo,motPasse, adresse, email, codePostal); 
+                                                
+                      if(clientresponse != null) {
+                          
+                      vResult = ActionSupport.SUCCESS;
+                      
+                      this.session.put("user", vResult);
+                      
+                      return vResult;
+                                      
+                      }
                 
-        else {   
-        port.addClient(refBibliotheque, nom, prenom,sexe,pseudo,motPasse, adresse, email, codePostal);    
+                      
+                      }
+                      
+                     
+                      
+                       } catch (Exception pe){
+                           
+                       this.addActionError("Veuillez Remplir les champs obligatoires !! \n Choisir un pseudo ou mail non utilisé");
 
-        this.session.put("user", vResult);
-        
-        vResult = ActionSupport.SUCCESS; 
-
-        }
-        
-        } catch(Exception pe) {
-            this.addActionError("Veuillez remplir tout les champs correctement");            
-        
-        }
-  
-            return vResult;
-            
-        }
+                                                                  
+                      }
+                                                            
+                      return vResult;
+                         
+                      }
     
     
     /*

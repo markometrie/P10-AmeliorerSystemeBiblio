@@ -184,11 +184,13 @@ public class AddUserAction extends ActionSupport implements SessionAware{
     if(!StringUtils.isAllEmpty( pseudo, motPasse, email)){
                 
     
-           port.addUser(refBibliotheque, pseudo, motPasse, email, nom, prenom);
+          UtilisateurResponse utilisateurresponse =  port.addUser(refBibliotheque, pseudo, motPasse, email, nom, prenom);
     
+          if(utilisateurresponse != null) {
            vResult = ActionSupport.SUCCESS;
            this.session.put("employe", vResult);
     
+           }
            }
         
            } catch(Exception pe) {

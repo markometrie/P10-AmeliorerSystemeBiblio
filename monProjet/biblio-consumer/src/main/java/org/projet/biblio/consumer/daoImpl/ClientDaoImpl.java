@@ -39,28 +39,30 @@ public class ClientDaoImpl extends AbstractDaoImpl implements ClientDao {
             
 	JdbcTemplate jdbcTemplate =  getJdbcTemplate();
         
-                      if (client.getPseudo() == null ) {
-                          
-                      }
-
+        
+                 
                       /* Nom des colonnes se situant dans table de la base de données*/
 
 	String sql = "INSERT INTO client ( refbibliotheque, nom, prenom, sexe, pseudo,  motpasse, adresse, email, codepostal) VALUES (?,?,?,?,?,?,?,?,?);";
 
-		
+      
 
+
+        
 	Object[] args = new Object[] {client.getRefBibliotheque(), client.getNom(),client.getPrenom(), client.getSexe(), client.getPseudo(), client.getMotPasse(), 
             
                                                                              client.getAdresse(), client.getEmail(), client.getCodePostal() };
  
 
                        try {
+                           
 
                        jdbcTemplate.update(sql, args);
 
-                      } catch (DuplicateKeyException exception) {
+                      }catch (EmptyResultDataAccessException exception) {
 
-                      System.out.println(exception.getMessage());
+                      System.out.println("Incorrect");
+
 
                        }
 

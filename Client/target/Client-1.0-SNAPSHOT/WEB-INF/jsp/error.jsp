@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <h2>Une erreur s'est produite</h2>
+    <h2>Une erreur s'est produite: Veuillez réessayer ! (Login / Email) déjà pris ou non conforme</h2>
 
     <s:actionerror />
 </body>

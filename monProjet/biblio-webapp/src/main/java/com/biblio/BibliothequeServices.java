@@ -519,6 +519,46 @@ public class BibliothequeServices extends AbstractResource {
            }
            
            
+           /**
+     *
+     * @param idUtilisateur
+     * @return
+     */
+    @WebMethod(operationName = "deleteUser")
+           public UtilisateurResponse doSuppUser(@WebParam(name="idutilisateur") int idUtilisateur) {
+               
+           Utilisateur utilisateur = new Utilisateur(); 
+           UtilisateurResponse response = new UtilisateurResponse();
+               
+               utilisateur.setIdUtilisateur(idUtilisateur);
+               
+               
+               
+               utilisateurDao.deleteUtilisateur(utilisateur);
+               
+              
+               
+               try{
+               
+               response.setPseudo(utilisateur.getPseudo());
+               response.setMotPasse(utilisateur.getMotPasse());
+               response.setNom(utilisateur.getNom());
+               response.setPrenom(utilisateur.getPrenom());
+               response.setEmail(utilisateur.getEmail());
+               response.setRefBibliotheque(utilisateur.getRefBibliotheque());
+               response.setIdUtilisateur(utilisateur.getIdUtilisateur());
+
+
+               } catch (Exception e){
+                   e.printStackTrace();
+               }
+               
+               return response;
+           
+
+               }
+           
+           
            
      /******************************************************************************************************/
     /************************************************Client************************************************

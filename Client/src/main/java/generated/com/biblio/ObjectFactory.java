@@ -24,10 +24,12 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
+    private final static QName _DeleteUser_QNAME = new QName("http://biblio.com/", "deleteUser");
     private final static QName _SearchBiblio_QNAME = new QName("http://biblio.com/", "searchBiblio");
     private final static QName _UtilisateurResponse_QNAME = new QName("http://biblio.com/", "UtilisateurResponse");
     private final static QName _AddPret_QNAME = new QName("http://biblio.com/", "addPret");
     private final static QName _ListInfoDocument_QNAME = new QName("http://biblio.com/", "listInfoDocument");
+    private final static QName _DeleteUserResponse_QNAME = new QName("http://biblio.com/", "deleteUserResponse");
     private final static QName _DoLoginClient_QNAME = new QName("http://biblio.com/", "doLoginClient");
     private final static QName _AddClientResponse_QNAME = new QName("http://biblio.com/", "addClientResponse");
     private final static QName _SearchPretResponse_QNAME = new QName("http://biblio.com/", "searchPretResponse");
@@ -325,6 +327,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link DeleteUser }
+     * 
+     */
+    public DeleteUser createDeleteUser() {
+        return new DeleteUser();
+    }
+
+    /**
      * Create an instance of {@link SearchBiblio }
      * 
      */
@@ -354,6 +364,23 @@ public class ObjectFactory {
      */
     public ListInfoDocument createListInfoDocument() {
         return new ListInfoDocument();
+    }
+
+    /**
+     * Create an instance of {@link DeleteUserResponse }
+     * 
+     */
+    public DeleteUserResponse createDeleteUserResponse() {
+        return new DeleteUserResponse();
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link DeleteUser }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://biblio.com/", name = "deleteUser")
+    public JAXBElement<DeleteUser> createDeleteUser(DeleteUser value) {
+        return new JAXBElement<DeleteUser>(_DeleteUser_QNAME, DeleteUser.class, null, value);
     }
 
     /**
@@ -390,6 +417,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://biblio.com/", name = "listInfoDocument")
     public JAXBElement<ListInfoDocument> createListInfoDocument(ListInfoDocument value) {
         return new JAXBElement<ListInfoDocument>(_ListInfoDocument_QNAME, ListInfoDocument.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link DeleteUserResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://biblio.com/", name = "deleteUserResponse")
+    public JAXBElement<DeleteUserResponse> createDeleteUserResponse(DeleteUserResponse value) {
+        return new JAXBElement<DeleteUserResponse>(_DeleteUserResponse_QNAME, DeleteUserResponse.class, null, value);
     }
 
     /**

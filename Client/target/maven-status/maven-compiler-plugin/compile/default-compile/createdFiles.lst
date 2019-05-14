@@ -5,10 +5,12 @@ com\client\action\AddDocumentAction.class
 com\biblio\DoLoginClientResponse.class
 com\biblio\DocumentResponse.class
 com\biblio\ListEmailClientResponse.class
+com\biblio\DeleteUserResponse.class
 com\biblio\DoLogin.class
 com\biblio\AddClientResponse.class
 com\biblio\ListClientResponse.class
 com\biblio\SearchBiblio.class
+com\biblio\DeleteUser.class
 com\biblio\PretResponse.class
 com\biblio\DeleteClient.class
 com\client\action\RechercheAction.class

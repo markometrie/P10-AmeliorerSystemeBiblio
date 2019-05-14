@@ -42,13 +42,15 @@ public class UtilisateurDaoImpl extends AbstractDaoImpl implements UtilisateurDa
                                                                                              utilisateur.getEmail(),utilisateur.getNom(), utilisateur.getPrenom() };
 
 
-                                       try {
+                                        try {
+                           
 
-                                       jdbcTemplate.update(sql, args);
+                                        jdbcTemplate.update(sql, args);
 
-                                       } catch (DuplicateKeyException exception) {
+                                        }catch (EmptyResultDataAccessException exception) {
 
-                                       System.out.println(exception.getMessage());
+                                       System.out.println("Incorrect");
+
 
                                         }
 
@@ -101,7 +103,28 @@ public class UtilisateurDaoImpl extends AbstractDaoImpl implements UtilisateurDa
 
     @Override
     public void deleteUtilisateur(Utilisateur utilisateur) {
+        
+        JdbcTemplate jdbcTemplate = getJdbcTemplate();
+                     
+                     String sql = "DELETE FROM utilisateur WHERE idutilisateur = ?";
+                     
+                     System.out.println(sql);
+                     
+                     Object[] args = new Object[] { utilisateur.getIdUtilisateur()};
+                     
+                     
+                     try {
+
+                      jdbcTemplate.update(sql, args);
+
+                      } catch (DuplicateKeyException exception) {
+
+                      System.out.println(exception.getMessage());
+
+                      }
+
+	}
     }
 
                                        
-}
+

@@ -1,0 +1,1 @@
+﻿ALTER TABLE client ADD CONSTRAINT email UNIQUE (email);
