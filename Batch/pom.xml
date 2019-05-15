@@ -13,24 +13,109 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <cxf.version>3.0.2</cxf.version>
+        
+ 
+    <!-- version de Spring batch -->
+    <spring-batch.version>3.0.0.RELEASE</spring-batch.version>
+        
     </properties>
     
     
     <dependencies>
+        
+        <!-- Dépendance de Spring Batch -->
+     <dependency>
+      <groupId>org.springframework.batch</groupId>
+      <artifactId>spring-batch-core</artifactId>
+      <version>4.1.2.RELEASE</version>
+    </dependency>
+        
+        
       <dependency>
            <groupId>com.sun.mail</groupId>
            <artifactId>javax.mail</artifactId>
            <version>1.6.2</version>
        </dependency>
+       
+       <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+<dependency>
+    <groupId>org.projectlombok</groupId>
+    <artifactId>lombok</artifactId>
+    <version>1.18.6</version>
+    <scope>provided</scope>
+</dependency>
+
+       
+       <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-dependencies -->
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-dependencies</artifactId>
+    <version>2.1.4.RELEASE</version>
+    <type>pom</type>
+    <scope>provided</scope>
+</dependency>
+       
+<!-- https://mvnrepository.com/artifact/org.subethamail/subethasmtp-wiser -->
+<dependency>
+    <groupId>org.subethamail</groupId>
+    <artifactId>subethasmtp-wiser</artifactId>
+    <version>1.2</version>
+    <scope>test</scope>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/com.sun.mail/smtp -->
+<dependency>
+    <groupId>com.sun.mail</groupId>
+    <artifactId>smtp</artifactId>
+    <version>1.6.3</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/javax.mail/mail -->
+<dependency>
+    <groupId>org.jvnet.mock-javamail</groupId>
+    <artifactId>mock-javamail</artifactId>
+    <version>1.7</version>
+</dependency>
+
+
+
+		
+    <!-- Junit -->
+    <dependency>
+           <groupId>junit</groupId>
+           <artifactId>junit</artifactId>
+           <version>4.11</version>
+           <scope>test</scope>
+    </dependency>
+    
+
+    <!-- Testng -->
+    <dependency>
+           <groupId>org.testng</groupId>
+           <artifactId>testng</artifactId>
+           <version>6.8.5</version>
+           <scope>test</scope>
+    </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+            <version>2.0.4.RELEASE</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>javax.inject</groupId>
+            <artifactId>javax.inject</artifactId>
+            <version>1</version>
+            <type>jar</type>
+        </dependency>
     </dependencies>
     
     
-<build>
+    
+    
+    
+      <build>
         <plugins>
-            
-
-            
-                   
+           
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
@@ -44,13 +129,8 @@
                 <groupId>org.apache.cxf</groupId>
                 <artifactId>cxf-codegen-plugin</artifactId>
                 <version>${cxf.version}</version>
-                
-                
-                
-            <executions>
-              
-               
-                
+
+            <executions>  
                 <execution>
 	<id>generate-sources</id>
 	<phase>generate-sources</phase>
@@ -58,10 +138,8 @@
                          <sourceRoot>${basedir}/src/main/java/generated</sourceRoot>
                       <wsdlOptions>
 	<wsdlOption>
-	   <!-- <wsdl>${basedir}/src/main/resources/biblio.wsdl</wsdl> 
-             <wsdl>http://localhost:8085/bibliotheque/bibliothequeB?wsdl</wsdl>
-            -->
-           <wsdl>http://localhost:8084/bibliotheque/bibliothequeB?wsdl</wsdl>
+	   
+                      <wsdl>http://localhost:8084/bibliotheque/bibliothequeB?wsdl</wsdl>
            
 	</wsdlOption>
 	</wsdlOptions>

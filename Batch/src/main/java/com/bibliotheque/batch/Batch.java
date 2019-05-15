@@ -7,6 +7,12 @@ import com.biblio.InfoPretResponse;
 import java.io.IOException;
 import java.util.List;
 import java.util.Properties;
+import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 /**
  *  Batch envoi d'email automatisé pour les clients dont
@@ -17,8 +23,11 @@ import java.util.Properties;
  */
 
 
+                                           @SpringBootApplication
+                                           @EnableScheduling
+                                           @EnableBatchProcessing
                                            public class Batch {
-    
+                                                   
                                             /*
                                            Entête du Mail
                                            */
@@ -49,11 +58,17 @@ import java.util.Properties;
                                            /**
                                            *
                                            * @param args
-                                           * @throws IOException
+                                           * @throws java.io.IOException
                                            */
                                            public static void main(String[] args) throws IOException {
-            
-            
+                                               
+                                       //    new ClassPathXmlApplicationContext("classpath*:job-config.xml");
+                                           
+                                           String springConfig = "classpath*:job-config.xml";
+
+	                    ApplicationContext context = new ClassPathXmlApplicationContext(springConfig);
+                                            
+                                             
 		// Récupération de fichier de configuration sous forme de Properties
 		Properties emailProps = PropsUtils.getProps("src/email.properties");
 
@@ -66,6 +81,9 @@ import java.util.Properties;
                 
 		try {
                     
+                                             
+                    
+                    
 		 // Récupération de la liste des clients Dans le web service 
                  
                                              BibliothequeServicesService bibliothequeServicesService= new BibliothequeServicesService();      
@@ -75,9 +93,9 @@ import java.util.Properties;
                                             // Appel à la méthode qui va récupérer les mails dont la date de fin de pret est dépassée
                                              
                                              listInfoDocument = port.listInfoDocument();
-                                                                                            
-		
-		} catch (Exception e) {
+                                                                                                   
+                                            
+		 } catch (Exception e) {
 			e.printStackTrace();
 		}
                 
@@ -87,5 +105,11 @@ import java.util.Properties;
 			sendEmail(listInfoDocument);
 		}
 	                      }
+                                           
+                                           
+                                           
+                                            
+                                            
+                                           
                                             }
     
