@@ -4,6 +4,7 @@ package com.bibliotheque.batch;
 
 import java.util.Date;
 import java.util.Properties;
+
 import javax.mail.Authenticator;
 import javax.mail.Message;
 import javax.mail.PasswordAuthentication;
@@ -11,8 +12,9 @@ import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
-import org.springframework.context.annotation.Bean;
+
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 
@@ -30,7 +32,6 @@ public class EmailsUtils {
     
     
 
-    
                       private static Session session;
 
 	private static Properties emailProps;
@@ -45,6 +46,7 @@ public class EmailsUtils {
 	 * 
 	 * @return
 	 */
+        
 	private static Session getSession() {
 		if (session != null) {
 			return session;
@@ -76,7 +78,6 @@ public class EmailsUtils {
 	 * @param subject
 	 * @param body
 	 */
-                      @Bean
 	public static void sendEmail(String toEmail, String subject, String body) {
 		Session session = getSession();
 

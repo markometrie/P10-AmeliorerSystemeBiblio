@@ -1,60 +1,28 @@
 
 package com.bibliotheque.batch;
 
-import com.biblio.BibliothequeServices;
-import com.biblio.BibliothequeServicesService;
-import com.biblio.InfoPretResponse;
-import java.io.IOException;
-import java.util.List;
-import java.util.Properties;
-import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ApplicationContext;
 
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import java.io.IOException;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 /**
- *  Batch envoi d'email automatisé pour les clients dont
- * la date de fin de prêt est expirée.
+ *  Batch envoi d'email automatisÃ© pour les clients dont
+ * la date de fin de prÃªt est expirÃ©e.
  * 
  *
  * @author Delomez Matthieu
  */
 
 
+                                           
                                            @SpringBootApplication
                                            @EnableScheduling
-                                           @EnableBatchProcessing
                                            public class Batch {
                                                    
-                                            /*
-                                           Entête du Mail
-                                           */
-                                            private static final String SUBJECT = "BOOK NOT RETURNED";
-
-                     
-
-	                     private static void sendEmail(List<InfoPretResponse> listInfoPretResponse) {
-                      
-                                            for(InfoPretResponse infoPretResponse : listInfoPretResponse) {
-                          
-                                            /*
-                                           Composition du message
-                                           return nomOuvrage
-                                           return Email
-                                           */                     
-                                            EmailsUtils.sendEmail(infoPretResponse.getEmail(), SUBJECT, "Bonjour ,  \n vous avez enprunté le livre :" + infoPretResponse.getNomouvrage() + " " +
-                                                                                                                                                                 "pendant une période supérieur à 4 semaines. \n\n"
-                                                                                                                                                              + "Vous êtes donc prié de restituer votre prêt dans votre bibliothèque.\n" +
-                                                                                                                                                                  "Cordialement, \n" +
-                                                                                                                                                                  "La direction"); 
-                                      
-                                            }
-		
-	                      }
-                             
-
                                            /**
                                            *
                                            * @param args
@@ -62,54 +30,9 @@ import org.springframework.scheduling.annotation.EnableScheduling;
                                            */
                                            public static void main(String[] args) throws IOException {
                                                
-                                       //    new ClassPathXmlApplicationContext("classpath*:job-config.xml");
-                                           
-                                           String springConfig = "classpath*:job-config.xml";
-
-	                    ApplicationContext context = new ClassPathXmlApplicationContext(springConfig);
-                                            
-                                             
-		// Récupération de fichier de configuration sous forme de Properties
-		Properties emailProps = PropsUtils.getProps("src/email.properties");
-
-		// Configuration EmailUtils
-                
-		EmailsUtils.setEmailProperties(emailProps);
-		
-                                           List<InfoPretResponse> listInfoDocument = null ;
-                                           
-                
-		try {
-                    
-                                             
-                    
-                    
-		 // Récupération de la liste des clients Dans le web service 
-                 
-                                             BibliothequeServicesService bibliothequeServicesService= new BibliothequeServicesService();      
-                                             BibliothequeServices port =  bibliothequeServicesService.getBibliothequeServicesPort();
-                                            
-                                             
-                                            // Appel à la méthode qui va récupérer les mails dont la date de fin de pret est dépassée
-                                             
-                                             listInfoDocument = port.listInfoDocument();
-                                                                                                   
-                                            
-		 } catch (Exception e) {
-			e.printStackTrace();
-		}
-                
-		// Envois des email de relance
-                
-		if (listInfoDocument != null) {
-			sendEmail(listInfoDocument);
-		}
-	                      }
-                                           
-                                           
-                                           
-                                            
+                                           SpringApplication.run(Batch.class, args);
                                             
                                            
+                                            }
                                             }
     

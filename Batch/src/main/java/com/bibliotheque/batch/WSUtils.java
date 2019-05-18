@@ -4,6 +4,7 @@ package com.bibliotheque.batch;
 import java.net.MalformedURLException;
 import java.net.URL;
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
@@ -14,6 +15,7 @@ import org.springframework.stereotype.Component;
 @EnableBatchProcessing
 public class WSUtils {
  
+    @Autowired
     private static String servicesUrl;
 
 	public static void setBaseUrl(String baseUrl) {
