@@ -1,5 +1,6 @@
 package org.projet.biblio.consumer.dao;
 
+import java.util.List;
 import org.projet.biblio.model.Bibliotheque;
 
 
@@ -45,6 +46,12 @@ public interface BibliothequeDao {
      * @param bibliotheque
      */
     void deleteBibliotheque(Bibliotheque bibliotheque);
+    
+        /**
+     *
+     * @return
+     */
+    List<Bibliotheque>getNomBibliotheque();
     
     
 }

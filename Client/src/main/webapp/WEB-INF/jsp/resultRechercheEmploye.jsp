@@ -58,6 +58,7 @@
                       <tr>
                               <th>Ref ouvrage</th>
                               <th>Ref bibliotheque</th>
+                              <th>Nom bibliotheque</th>
                               <th>Nom de l'ouvrage</th>
                               <th>Quantité total</th>
                       </tr>
@@ -67,6 +68,7 @@
 
                       <li><td><s:property value="#listeDoc.refOuvrage" /></td></li> 
                       <li><td><s:property value="#listeDoc.refBibliotheque" /></td></li>
+                      <li><td><s:property value="#listeDoc.nomBibliotheque" /></td></li>
                       <li><td><s:property value="#listeDoc.nomOuvrage" /></td></li>
                       <li><td><s:property value="#listeDoc.quantiteTotal" /></td></li>
                       </ul></tr>

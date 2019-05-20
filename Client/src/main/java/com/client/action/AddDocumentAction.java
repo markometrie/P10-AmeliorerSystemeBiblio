@@ -22,6 +22,8 @@ public class AddDocumentAction extends ActionSupport {
        private int refOuvrage;
        private int refBibliotheque;
        
+       private String nomBibliotheque;
+       
        private String nomOuvrage;
        private String quantiteTotal;
        
@@ -95,6 +97,17 @@ public class AddDocumentAction extends ActionSupport {
     public void setQuantiteTotal(String quantiteTotal) {
         this.quantiteTotal = quantiteTotal;
     }
+    
+
+    public String getNomBibliotheque() {
+        return nomBibliotheque;
+    }
+
+    public void setNomBibliotheque(String nomBibliotheque) {
+        this.nomBibliotheque = nomBibliotheque;
+    }
+    
+    
 
 
     
@@ -118,17 +131,18 @@ public class AddDocumentAction extends ActionSupport {
         DocumentResponse documentResponse = new DocumentResponse();
         
         documentResponse.setRefbibliotheque(refBibliotheque);
+        documentResponse.setNombibliotheque(nomBibliotheque);
         documentResponse.setNomouvrage(nomOuvrage);
         documentResponse.setQuantitetotal(quantiteTotal);
         
         
         try {
             
-        if(!StringUtils.isAllEmpty(nomOuvrage, quantiteTotal)) {
+        if(!StringUtils.isAllEmpty(nomBibliotheque ,nomOuvrage, quantiteTotal)) {
                    
             
         
-        port.addDocument( refBibliotheque, nomOuvrage, quantiteTotal);
+        port.addDocument( refBibliotheque, nomBibliotheque, nomOuvrage, quantiteTotal);
         
         vResult = ActionSupport.SUCCESS;
         

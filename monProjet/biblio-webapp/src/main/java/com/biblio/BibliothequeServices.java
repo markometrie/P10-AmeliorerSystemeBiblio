@@ -149,6 +149,7 @@ public class BibliothequeServices extends AbstractResource {
     /**
      *
      * @param refBibliotheque
+     * @param nomBibliotheque
      * @param nomOuvrage
      * @param quantiteTotal
      * @return
@@ -156,6 +157,7 @@ public class BibliothequeServices extends AbstractResource {
     @WebMethod(operationName="addDocument") 
     public DocumentResponse doAddBook( 
                                                                                 @WebParam(name="refbibliotheque") int refBibliotheque,
+                                                                                @WebParam(name="nombibliotheque") String nomBibliotheque,
                                                                                 @WebParam(name="nomouvrage") String nomOuvrage,
                                                                                 @WebParam(name="quantitetotal") String quantiteTotal) {
         
@@ -163,10 +165,12 @@ public class BibliothequeServices extends AbstractResource {
          DocumentResponse response = new DocumentResponse();
          
                document.setRefBibliotheque(refBibliotheque);
+               document.setNomBibliotheque(nomBibliotheque);
                document.setNomOuvrage(nomOuvrage);
                document.setQuantiteTotal(quantiteTotal);
 
                response.setRefBibliotheque(refBibliotheque);
+               response.setNomBibliotheque(nomBibliotheque);
                response.setNomOuvrage(nomOuvrage);
                response.setQuantiteTotal(quantiteTotal);
 
@@ -208,6 +212,7 @@ public class BibliothequeServices extends AbstractResource {
                      DocumentResponse documentResponse = new DocumentResponse();
 
                      documentResponse.setRefOuvrage(document.getRefOuvrage());
+                     documentResponse.setNomBibliotheque(document.getNomBibliotheque());
                      documentResponse.setRefBibliotheque(document.getRefBibliotheque());
                      documentResponse.setNomOuvrage(document.getNomOuvrage());
                      documentResponse.setQuantiteTotal(document.getQuantiteTotal());

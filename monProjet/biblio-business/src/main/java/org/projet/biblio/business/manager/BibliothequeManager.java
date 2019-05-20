@@ -1,6 +1,7 @@
 package org.projet.biblio.business.manager;
 
 
+import java.util.List;
 import org.projet.biblio.model.Bibliotheque;
 
 
@@ -46,5 +47,11 @@ public interface BibliothequeManager {
      * @param bibliotheque
      */
     void deleteBibliotheque (Bibliotheque bibliotheque); // Supprimer une bibliothèque
+    
+    /*
+    Création d'une liste de Bibliotheque qui va retourner son nom
+    */
+    List<Bibliotheque> getNomBibliotheque();
+  
     
 }

@@ -40,6 +40,9 @@
     
     <body>
         
+        
+        
+        
                       <div class="titrePret">
                       <h2>Historique des Prêts</h2>
                       </div>
@@ -60,6 +63,7 @@
                       <ul>
                       <s:iterator value="listPretResponse" var="pret">
 
+                          
                       <li><td><s:property value="#pret.refPret" /></td></li> 
                       <li><td><s:property value="#pret.refOuvrage" /></td></li>
                       <li><td><s:property value="#pret.refClient" /></td></li>

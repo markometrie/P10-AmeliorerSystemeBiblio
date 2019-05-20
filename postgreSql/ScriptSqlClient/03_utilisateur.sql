@@ -14,4 +14,4 @@ VALUES(
 'martine59@gmail.com',
 'Gerard',
 'Martine'
-)
+);

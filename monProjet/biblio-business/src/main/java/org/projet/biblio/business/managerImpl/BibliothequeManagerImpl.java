@@ -1,5 +1,6 @@
 package org.projet.biblio.business.managerImpl;
 
+import java.util.List;
 import org.projet.biblio.business.manager.BibliothequeManager;
 import org.projet.biblio.model.Bibliotheque;
 
@@ -42,6 +43,12 @@ public class BibliothequeManagerImpl extends AbstractManager implements Biblioth
     public void deleteBibliotheque(Bibliotheque bibliotheque) {
        getDaoFactory().getBibliothequeDao().deleteBibliotheque(bibliotheque);   
     }
+    
+    @Override
+    public List<Bibliotheque> getNomBibliotheque() {
+         return getDaoFactory().getBibliothequeDao().getNomBibliotheque();
+    }
+
 
     
 }

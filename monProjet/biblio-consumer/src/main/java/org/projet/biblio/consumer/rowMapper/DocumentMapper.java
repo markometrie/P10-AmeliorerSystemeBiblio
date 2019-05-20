@@ -25,6 +25,8 @@ public class DocumentMapper implements RowMapper<Document> {
                                      
                                      document.setRefBibliotheque(rs.getInt("refbibliotheque"));
                                      
+                                     document.setNomBibliotheque(rs.getString("nombibliotheque"));
+                                             
                                      document.setNomOuvrage(rs.getString("nomouvrage"));
                                      
                                      document.setQuantiteTotal(rs.getString("quantitetotal"));

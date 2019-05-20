@@ -14,8 +14,11 @@ public class Document  {
     
     private int refOuvrage;
     private int refBibliotheque;
+    private String nomBibliotheque;
     private String nomOuvrage;
     private String quantiteTotal;
+    
+    
     
     
     //=========Getters & Setters=============
@@ -83,6 +86,17 @@ public class Document  {
     public void setQuantiteTotal(String quantiteTotal) {
         this.quantiteTotal = quantiteTotal;
     }
+    
+
+    public String getNomBibliotheque() {
+        return nomBibliotheque;
+    }
+
+    public void setNomBibliotheque(String nomBibliotheque) {
+        this.nomBibliotheque = nomBibliotheque;
+    }
+    
+    
 
     
 

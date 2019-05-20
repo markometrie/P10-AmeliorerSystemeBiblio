@@ -47,7 +47,6 @@
     
     
     
-    
     <body>
                       <div class="titreDocument">
                       <h2>Recherche ouvrage</h2>
@@ -58,6 +57,7 @@
                       <tr>
                               <th>Ref ouvrage</th>
                               <th>Ref bibliotheque</th>
+                              <th>Nom bibliotheque</th>
                               <th>Nom de l'ouvrage</th>
                               <th>Quantité total</th>
                       </tr>
@@ -66,7 +66,13 @@
                       <s:iterator value="listDocumentResponse" var="listeDocument">
 
                       <li><td><s:property value="#listeDocument.refOuvrage" /></td></li> 
+                      
                       <li><td><s:property value="#listeDocument.refBibliotheque" /></td></li>
+                      
+                      <li><td><s:property value="#listeDocument.nomBibliotheque" /></td></li>
+                      
+                      
+                      
                       <li><td><s:property value="#listeDocument.nomOuvrage" /></td></li>
                       <li><td><s:property value="#listeDocument.quantiteTotal" /></td></li>
                       </ul></tr>

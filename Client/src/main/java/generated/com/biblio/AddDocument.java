@@ -17,6 +17,7 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="refbibliotheque" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="nombibliotheque" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="nomouvrage" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="quantitetotal" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *       &lt;/sequence>
@@ -30,12 +31,14 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "addDocument", propOrder = {
     "refbibliotheque",
+    "nombibliotheque",
     "nomouvrage",
     "quantitetotal"
 })
 public class AddDocument {
 
     protected int refbibliotheque;
+    protected String nombibliotheque;
     protected String nomouvrage;
     protected String quantitetotal;
 
@@ -53,6 +56,30 @@ public class AddDocument {
      */
     public void setRefbibliotheque(int value) {
         this.refbibliotheque = value;
+    }
+
+    /**
+     * Obtient la valeur de la propriété nombibliotheque.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getNombibliotheque() {
+        return nombibliotheque;
+    }
+
+    /**
+     * Définit la valeur de la propriété nombibliotheque.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setNombibliotheque(String value) {
+        this.nombibliotheque = value;
     }
 
     /**

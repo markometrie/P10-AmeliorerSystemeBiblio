@@ -1,11 +1,13 @@
 package org.projet.biblio.consumer.daoImpl;
 
+import java.util.List;
 import javax.sql.DataSource;
 import org.projet.biblio.consumer.dao.BibliothequeDao;
 import org.projet.biblio.consumer.rowMapper.BibliothequeMapper;
 import org.projet.biblio.model.Bibliotheque;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 
@@ -106,6 +108,33 @@ public class BibliothequeDaoImpl extends AbstractDaoImpl implements Bibliotheque
 
     @Override
     public void deleteBibliotheque(Bibliotheque bibliotheque) {
+    }
+
+    @Override
+    public List<Bibliotheque> getNomBibliotheque() {
+        
+        String sql = "SELECT * FROM bibliotheque ";
+                      
+                      
+                      JdbcTemplate jdbcTemplate = getJdbcTemplate();
+                      
+                      
+                      try {
+
+	List<Bibliotheque> publicationQuery = jdbcTemplate.query(sql,
+
+	new BeanPropertyRowMapper(Bibliotheque.class));
+
+	return publicationQuery;
+
+
+	} catch (EmptyResultDataAccessException exception) {
+
+	System.out.println("Incorrect");
+
+	return null;
+
+	}
     }
     
 }

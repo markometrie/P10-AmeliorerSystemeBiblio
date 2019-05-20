@@ -21,6 +21,8 @@ public class DocumentResponse {
     private int refOuvrage;
     private int refBibliotheque;
     
+    private String nomBibliotheque;
+    
     private String nomOuvrage;
     private String quantiteTotal;
     
@@ -93,6 +95,20 @@ public class DocumentResponse {
     public void setQuantiteTotal(String quantiteTotal) {
         this.quantiteTotal = quantiteTotal;
     }
+
+    /*
+    @param nomBibliotheque
+    */
+    public String getNomBibliotheque() {
+        return nomBibliotheque;
+    }
+
+    @XmlElement(name = "nombibliotheque")
+    public void setNomBibliotheque(String nomBibliotheque) {
+        this.nomBibliotheque = nomBibliotheque;
+    }
+    
+    
 
 
     

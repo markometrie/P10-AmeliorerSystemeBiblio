@@ -16,4 +16,4 @@ VALUES(
 Avec près de 53 millions de documents, la New York Public Library est la seconde plus grande
 bibliothèque publique des États-Unis, derrière la Bibliothèque du Congrès.'
 
-)
+);
