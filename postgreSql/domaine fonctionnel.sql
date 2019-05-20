@@ -37,6 +37,8 @@ CREATE TABLE document (
                 refBibliotheque INTEGER NOT NULL,
                 nomBibliotheque VARCHAR(255) NOT NULL,
                 nomOuvrage VARCHAR(255) NOT NULL,
+                categorie VARCHAR(255) NOT NULL,
+                rayon VARCHAR(255) NOT NULL,
                 quantiteTotal VARCHAR(20) NOT NULL,
                 CONSTRAINT document_pk PRIMARY KEY (refOuvrage)
 );

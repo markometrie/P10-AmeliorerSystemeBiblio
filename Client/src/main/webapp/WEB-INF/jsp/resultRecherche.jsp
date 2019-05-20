@@ -59,6 +59,8 @@
                               <th>Ref bibliotheque</th>
                               <th>Nom bibliotheque</th>
                               <th>Nom de l'ouvrage</th>
+                              <th>Categorie</th>
+                              <th>Rayon du livre</th>
                               <th>Quantité total</th>
                       </tr>
                       <tr>    
@@ -70,10 +72,13 @@
                       <li><td><s:property value="#listeDocument.refBibliotheque" /></td></li>
                       
                       <li><td><s:property value="#listeDocument.nomBibliotheque" /></td></li>
-                      
-                      
-                      
+
                       <li><td><s:property value="#listeDocument.nomOuvrage" /></td></li>
+                      
+                      <li><td><s:property value="#listeDocument.categorie" /></td></li>
+                      
+                      <li><td><s:property value="#listeDocument.rayon" /></td></li>
+                      
                       <li><td><s:property value="#listeDocument.quantiteTotal" /></td></li>
                       </ul></tr>
                       </s:iterator>

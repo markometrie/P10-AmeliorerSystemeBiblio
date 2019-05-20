@@ -24,6 +24,11 @@ public class DocumentResponse {
     private String nomBibliotheque;
     
     private String nomOuvrage;
+    
+    private String categorie;
+    
+    private String rayon;
+    
     private String quantiteTotal;
     
     //=========Getters & Setters=============
@@ -107,6 +112,26 @@ public class DocumentResponse {
     public void setNomBibliotheque(String nomBibliotheque) {
         this.nomBibliotheque = nomBibliotheque;
     }
+
+    public String getCategorie() {
+        return categorie;
+    }
+
+    @XmlElement(name = "categorie")
+    public void setCategorie(String categorie) {
+        this.categorie = categorie;
+    }
+
+    public String getRayon() {
+        return rayon;
+    }
+    
+    @XmlElement(name = "rayon")
+    public void setRayon(String rayon) {
+        this.rayon = rayon;
+    }
+    
+    
     
     
 

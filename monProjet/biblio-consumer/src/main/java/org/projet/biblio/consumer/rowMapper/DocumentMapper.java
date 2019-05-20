@@ -29,6 +29,10 @@ public class DocumentMapper implements RowMapper<Document> {
                                              
                                      document.setNomOuvrage(rs.getString("nomouvrage"));
                                      
+                                     document.setCategorie(rs.getString("categorie"));
+                                     
+                                     document.setRayon(rs.getString("rayon"));
+                                     
                                      document.setQuantiteTotal(rs.getString("quantitetotal"));
                                      
 

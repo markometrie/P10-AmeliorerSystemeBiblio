@@ -19,6 +19,8 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="refbibliotheque" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *         &lt;element name="nombibliotheque" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="nomouvrage" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="categorie" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="rayon" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="quantitetotal" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -33,6 +35,8 @@ import javax.xml.bind.annotation.XmlType;
     "refbibliotheque",
     "nombibliotheque",
     "nomouvrage",
+    "categorie",
+    "rayon",
     "quantitetotal"
 })
 public class AddDocument {
@@ -40,6 +44,8 @@ public class AddDocument {
     protected int refbibliotheque;
     protected String nombibliotheque;
     protected String nomouvrage;
+    protected String categorie;
+    protected String rayon;
     protected String quantitetotal;
 
     /**
@@ -104,6 +110,54 @@ public class AddDocument {
      */
     public void setNomouvrage(String value) {
         this.nomouvrage = value;
+    }
+
+    /**
+     * Obtient la valeur de la propriété categorie.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getCategorie() {
+        return categorie;
+    }
+
+    /**
+     * Définit la valeur de la propriété categorie.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setCategorie(String value) {
+        this.categorie = value;
+    }
+
+    /**
+     * Obtient la valeur de la propriété rayon.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getRayon() {
+        return rayon;
+    }
+
+    /**
+     * Définit la valeur de la propriété rayon.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setRayon(String value) {
+        this.rayon = value;
     }
 
     /**

@@ -16,9 +16,11 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
+ *         &lt;element name="categorie" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="nombibliotheque" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="nomouvrage" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="quantitetotal" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="rayon" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="refbibliotheque" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *         &lt;element name="refouvrage" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *       &lt;/sequence>
@@ -31,19 +33,47 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "DocumentResponse", propOrder = {
+    "categorie",
     "nombibliotheque",
     "nomouvrage",
     "quantitetotal",
+    "rayon",
     "refbibliotheque",
     "refouvrage"
 })
 public class DocumentResponse {
 
+    protected String categorie;
     protected String nombibliotheque;
     protected String nomouvrage;
     protected String quantitetotal;
+    protected String rayon;
     protected int refbibliotheque;
     protected int refouvrage;
+
+    /**
+     * Obtient la valeur de la propriété categorie.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getCategorie() {
+        return categorie;
+    }
+
+    /**
+     * Définit la valeur de la propriété categorie.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setCategorie(String value) {
+        this.categorie = value;
+    }
 
     /**
      * Obtient la valeur de la propriété nombibliotheque.
@@ -115,6 +145,30 @@ public class DocumentResponse {
      */
     public void setQuantitetotal(String value) {
         this.quantitetotal = value;
+    }
+
+    /**
+     * Obtient la valeur de la propriété rayon.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getRayon() {
+        return rayon;
+    }
+
+    /**
+     * Définit la valeur de la propriété rayon.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setRayon(String value) {
+        this.rayon = value;
     }
 
     /**

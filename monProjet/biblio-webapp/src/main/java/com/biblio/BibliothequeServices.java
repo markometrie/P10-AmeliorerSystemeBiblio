@@ -151,6 +151,8 @@ public class BibliothequeServices extends AbstractResource {
      * @param refBibliotheque
      * @param nomBibliotheque
      * @param nomOuvrage
+     * @param categorie
+     * @param rayon
      * @param quantiteTotal
      * @return
      */
@@ -159,6 +161,8 @@ public class BibliothequeServices extends AbstractResource {
                                                                                 @WebParam(name="refbibliotheque") int refBibliotheque,
                                                                                 @WebParam(name="nombibliotheque") String nomBibliotheque,
                                                                                 @WebParam(name="nomouvrage") String nomOuvrage,
+                                                                                @WebParam(name="categorie") String categorie,
+                                                                                @WebParam(name="rayon") String rayon,
                                                                                 @WebParam(name="quantitetotal") String quantiteTotal) {
         
          Document document = new Document(); 
@@ -167,11 +171,15 @@ public class BibliothequeServices extends AbstractResource {
                document.setRefBibliotheque(refBibliotheque);
                document.setNomBibliotheque(nomBibliotheque);
                document.setNomOuvrage(nomOuvrage);
+               document.setCategorie(categorie);
+               document.setRayon(rayon);
                document.setQuantiteTotal(quantiteTotal);
 
                response.setRefBibliotheque(refBibliotheque);
                response.setNomBibliotheque(nomBibliotheque);
                response.setNomOuvrage(nomOuvrage);
+               response.setCategorie(categorie);
+               response.setRayon(rayon);
                response.setQuantiteTotal(quantiteTotal);
 
                
@@ -215,6 +223,8 @@ public class BibliothequeServices extends AbstractResource {
                      documentResponse.setNomBibliotheque(document.getNomBibliotheque());
                      documentResponse.setRefBibliotheque(document.getRefBibliotheque());
                      documentResponse.setNomOuvrage(document.getNomOuvrage());
+                     documentResponse.setCategorie(document.getCategorie());
+                     documentResponse.setRayon(document.getRayon());
                      documentResponse.setQuantiteTotal(document.getQuantiteTotal());
 
 

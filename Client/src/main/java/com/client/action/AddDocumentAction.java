@@ -25,6 +25,11 @@ public class AddDocumentAction extends ActionSupport {
        private String nomBibliotheque;
        
        private String nomOuvrage;
+       
+       private String categorie;
+       
+       private String rayon;
+       
        private String quantiteTotal;
        
        //=========Elements Struts=============
@@ -106,6 +111,25 @@ public class AddDocumentAction extends ActionSupport {
     public void setNomBibliotheque(String nomBibliotheque) {
         this.nomBibliotheque = nomBibliotheque;
     }
+
+    public String getCategorie() {
+        return categorie;
+    }
+
+    public void setCategorie(String categorie) {
+        this.categorie = categorie;
+    }
+
+    public String getRayon() {
+        return rayon;
+    }
+
+    public void setRayon(String rayon) {
+        this.rayon = rayon;
+    }
+    
+    
+    
     
     
 
@@ -133,6 +157,8 @@ public class AddDocumentAction extends ActionSupport {
         documentResponse.setRefbibliotheque(refBibliotheque);
         documentResponse.setNombibliotheque(nomBibliotheque);
         documentResponse.setNomouvrage(nomOuvrage);
+        documentResponse.setCategorie(categorie);
+        documentResponse.setRayon(rayon);
         documentResponse.setQuantitetotal(quantiteTotal);
         
         
@@ -142,7 +168,7 @@ public class AddDocumentAction extends ActionSupport {
                    
             
         
-        port.addDocument( refBibliotheque, nomBibliotheque, nomOuvrage, quantiteTotal);
+        port.addDocument( refBibliotheque, nomBibliotheque, nomOuvrage, categorie, rayon,quantiteTotal);
         
         vResult = ActionSupport.SUCCESS;
         

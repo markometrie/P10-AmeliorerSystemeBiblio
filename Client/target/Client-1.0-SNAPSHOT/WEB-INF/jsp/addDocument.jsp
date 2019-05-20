@@ -56,6 +56,8 @@
                     	<s:textfield name="refBibliotheque" label="N° Bibliotheque"/>
                         <s:textfield name="nomBibliotheque" label="Nom de la Bibliotheque"/>
                       <s:textfield name="nomOuvrage" label="Nom de l'ouvrage" />
+                      <s:textfield name="categorie" label="Categorie" />
+                      <s:textfield name="rayon" label="Rayon du livre" />
                       <s:textfield name="quantiteTotal" label="Quantite total" />
 		
 	<s:submit />

@@ -16,6 +16,8 @@ public class Document  {
     private int refBibliotheque;
     private String nomBibliotheque;
     private String nomOuvrage;
+    private String categorie;
+    private String rayon;
     private String quantiteTotal;
     
     
@@ -95,6 +97,24 @@ public class Document  {
     public void setNomBibliotheque(String nomBibliotheque) {
         this.nomBibliotheque = nomBibliotheque;
     }
+
+    public String getCategorie() {
+        return categorie;
+    }
+
+    public void setCategorie(String categorie) {
+        this.categorie = categorie;
+    }
+
+    public String getRayon() {
+        return rayon;
+    }
+
+    public void setRayon(String rayon) {
+        this.rayon = rayon;
+    }
+    
+    
     
     
 
