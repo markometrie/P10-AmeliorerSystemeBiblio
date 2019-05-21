@@ -58,6 +58,7 @@
                               <th>Fin du prêt</th>
                               <th>Exemplaire</th>
                               <th>Prolongé</th>
+                              <th>Pret cloturé</th>
                       </tr>
                       <tr>    
                       <ul>
@@ -72,6 +73,7 @@
                       <li><td><s:property value="#pret.dateFinPret" /></td></li>
                       <li><td><s:property value="#pret.nbrExemplaire" /></td></li>
                       <li><td><s:property value="#pret.isProlonger" /></td></li>
+                      <li><td><s:property value="#pret.isCloturationPret" /></td></li>
                       </ul></tr>
                       </s:iterator>
                           </table></div>

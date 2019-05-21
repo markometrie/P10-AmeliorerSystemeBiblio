@@ -22,6 +22,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="dureepret" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="nbrexemplaire" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="prolonger" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *         &lt;element name="cloturationpret" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -37,7 +38,8 @@ import javax.xml.bind.annotation.XmlType;
     "refouvrage",
     "dureepret",
     "nbrexemplaire",
-    "prolonger"
+    "prolonger",
+    "cloturationpret"
 })
 public class AddPret {
 
@@ -47,6 +49,7 @@ public class AddPret {
     protected String dureepret;
     protected String nbrexemplaire;
     protected boolean prolonger;
+    protected boolean cloturationpret;
 
     /**
      * Obtient la valeur de la propriété refpret.
@@ -158,6 +161,22 @@ public class AddPret {
      */
     public void setProlonger(boolean value) {
         this.prolonger = value;
+    }
+
+    /**
+     * Obtient la valeur de la propriété cloturationpret.
+     * 
+     */
+    public boolean isCloturationpret() {
+        return cloturationpret;
+    }
+
+    /**
+     * Définit la valeur de la propriété cloturationpret.
+     * 
+     */
+    public void setCloturationpret(boolean value) {
+        this.cloturationpret = value;
     }
 
 }

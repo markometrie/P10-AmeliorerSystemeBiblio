@@ -5,7 +5,8 @@ datePret,
 dureePret,
 dateFinPret,
 nbrExemplaire,
-prolonger
+prolonger,
+cloturationPret
 )
 
 VALUES(
@@ -15,6 +16,7 @@ VALUES(
 '4 semaines',
 '2019-06-20',
 '1',
+FALSE,
 FALSE
 );
 

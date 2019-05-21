@@ -18,6 +18,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
+ *         &lt;element name="cloturationpret" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
  *         &lt;element name="datefinpret" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
  *         &lt;element name="datepret" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
  *         &lt;element name="dureePret" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
@@ -36,6 +37,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PretResponse", propOrder = {
+    "cloturationpret",
     "datefinpret",
     "datepret",
     "dureePret",
@@ -47,6 +49,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class PretResponse {
 
+    protected boolean cloturationpret;
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar datefinpret;
     @XmlSchemaType(name = "dateTime")
@@ -57,6 +60,22 @@ public class PretResponse {
     protected int refclient;
     protected int refouvrage;
     protected int refpret;
+
+    /**
+     * Obtient la valeur de la propriété cloturationpret.
+     * 
+     */
+    public boolean isCloturationpret() {
+        return cloturationpret;
+    }
+
+    /**
+     * Définit la valeur de la propriété cloturationpret.
+     * 
+     */
+    public void setCloturationpret(boolean value) {
+        this.cloturationpret = value;
+    }
 
     /**
      * Obtient la valeur de la propriété datefinpret.

@@ -35,12 +35,12 @@ public class PretDaoImpl extends AbstractDaoImpl implements PretDao {
                       Méthode INSERT qui a pour objectif de créer un nouveau pret.
                       */
 
-	String sql = "INSERT INTO pret ( refclient, refouvrage, datepret, dureepret, datefinpret, nbrexemplaire, prolonger) VALUES (?,?,?,?,?,?,?);";
+	String sql = "INSERT INTO pret ( refclient, refouvrage, datepret, dureepret, datefinpret, nbrexemplaire, prolonger, cloturationpret) VALUES (?,?,?,?,?,?,?,?);";
 
 
 	 Object[] args = new Object[] { pret.getRefClient(), pret.getRefOuvrage(), pret.getDatePret(), pret.getDureePret(), pret.getDateFinPret(),
                                    
-                                                                              pret.getNbrExemplaire(), pret.isProlonger() };
+                                                                              pret.getNbrExemplaire(), pret.isProlonger(), pret.isCloturationPret()};
 
                       try {
 

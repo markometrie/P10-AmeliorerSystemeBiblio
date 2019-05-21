@@ -38,6 +38,8 @@ public class PretMapper implements RowMapper<Pret> {
                                        
                                        pret.setProlonger(rs.getBoolean("prolonger"));
                                        
+                                       pret.setCloturationPret(rs.getBoolean("cloturationpret"));
+                                       
                                        return pret;
                 
     

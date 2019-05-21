@@ -25,6 +25,7 @@ public class Pret  {
     private String nbrExemplaire;
     
     private boolean prolonger;
+    private boolean cloturationPret;
     
     
     //=========Getters & Setters=============
@@ -156,6 +157,16 @@ public class Pret  {
     public void setProlonger(boolean prolonger) {
         this.prolonger = prolonger;
     }
+
+    public boolean isCloturationPret() {
+        return cloturationPret;
+    }
+
+    public void setCloturationPret(boolean cloturationPret) {
+        this.cloturationPret = cloturationPret;
+    }
+    
+    
 
     
     

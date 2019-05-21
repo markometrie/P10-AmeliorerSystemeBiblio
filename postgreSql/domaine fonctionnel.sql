@@ -76,6 +76,7 @@ CREATE TABLE pret (
                 dateFinPret DATE NOT NULL,
                 nbrExemplaire VARCHAR(100) NOT NULL,
                 prolonger BOOLEAN NOT NULL,
+                cloturationPret BOOLEAN NOT NULL,
                 CONSTRAINT pret_pk PRIMARY KEY (refPret)
 );
 

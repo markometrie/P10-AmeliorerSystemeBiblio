@@ -258,6 +258,7 @@ public class BibliothequeServices extends AbstractResource {
      * @param dureePret
      * @param nbrExemplaire
      * @param prolonger
+     * @param cloturationPret
      * @return
      */
            @WebMethod(operationName = "addPret")
@@ -267,7 +268,8 @@ public class BibliothequeServices extends AbstractResource {
                                                                              @WebParam(name="dureepret") String dureePret,
                                                                              
                                                                              @WebParam(name="nbrexemplaire") String nbrExemplaire,
-                                                                             @WebParam(name="prolonger") boolean prolonger  ) {
+                                                                             @WebParam(name="prolonger") boolean prolonger ,
+                                                                             @WebParam(name="cloturationpret") boolean cloturationPret ){
                
                
            Pret pret = new Pret(); 
@@ -292,6 +294,7 @@ public class BibliothequeServices extends AbstractResource {
                pret.setDateFinPret(dateFinPret);
                pret.setNbrExemplaire(nbrExemplaire);
                pret.setProlonger(prolonger);
+               pret.setCloturationPret(cloturationPret);
 
                        
                response.setRefPret(refPret);
@@ -302,6 +305,7 @@ public class BibliothequeServices extends AbstractResource {
                response.setDateFinPret(dateFinPret);
                response.setDureePret(nbrExemplaire);
                response.setProlonger(prolonger);
+               response.setCloturationPret(cloturationPret);
 
               pretDao.addPret(pret);
               
@@ -344,6 +348,7 @@ public class BibliothequeServices extends AbstractResource {
                response.setDateFinPret(pret.getDateFinPret());
                response.setNbrExemplaire(pret.getNbrExemplaire());
                response.setProlonger(pret.isProlonger());
+               response.setCloturationPret(pret.isCloturationPret());
 
 
                } catch (Exception e){
@@ -386,6 +391,7 @@ public class BibliothequeServices extends AbstractResource {
                response.setDateFinPret(pret.getDateFinPret());
                response.setNbrExemplaire(pret.getNbrExemplaire());
                response.setProlonger(pret.isProlonger());
+               response.setCloturationPret(pret.isCloturationPret());
                
                } catch (Exception e){
                    e.printStackTrace();
@@ -421,6 +427,7 @@ public class BibliothequeServices extends AbstractResource {
                       pretResponse.setDateFinPret(pret.getDateFinPret());
                       pretResponse.setNbrExemplaire(pret.getNbrExemplaire());
                       pretResponse.setProlonger(pret.isProlonger());
+                      pretResponse.setCloturationPret(pret.isCloturationPret());
 
 	listPretResponse.add(pretResponse);
 

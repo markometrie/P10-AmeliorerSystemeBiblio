@@ -29,6 +29,7 @@ public class PretAction extends ActionSupport {
     protected String nbrexemplaire;
     
     protected boolean prolonger;
+    protected boolean cloturationpret;
     
     /*
     Variable pour gérer l'incrémentation des prêts.
@@ -198,6 +199,16 @@ public class PretAction extends ActionSupport {
     public void setProlonger(boolean prolonger) {
         this.prolonger = prolonger;
     }
+
+    public boolean isCloturationpret() {
+        return cloturationpret;
+    }
+
+    public void setCloturationpret(boolean cloturationPret) {
+        this.cloturationpret = cloturationPret;
+    }
+    
+    
     
 
     /**
@@ -268,13 +279,13 @@ public class PretAction extends ActionSupport {
                       pretResponse.setDureePret(dureePret);
                       pretResponse.setNbrexemplaire(nbrexemplaire);
                       pretResponse.setProlonger(prolonger);
-
+                      pretResponse.setCloturationpret(cloturationpret);
 
                       try {
                           
                       if (!StringUtils.isAllEmpty(dureePret)) {
                           
-                      port.addPret(refpret, refclient, refouvrage, dureePret, nbrexemplaire, prolonger);
+                      port.addPret(refpret, refclient, refouvrage, dureePret, nbrexemplaire, prolonger, cloturationpret);
                           
                                            
 

@@ -53,6 +53,7 @@
                       
 	<s:textfield name="nbrexemplaire" label="nbrexemplaire"/>
         	<s:textfield name="prolonger" label="prolonger" />
+                      <s:textfield name="cloturationpret" label="cloturationpret" />
 	<s:submit />
 	</s:form>
                       </div>
