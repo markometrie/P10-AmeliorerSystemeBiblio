@@ -11,18 +11,26 @@
 	<name>Batch</name>
 	<description>Send mails with Spring Batch </description>
 
+
+                  <!-- Dépendance projet Spring Boot -->
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.3.3.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+        
+        
+        
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.8</java.version>
-                <cxf.version>3.0.2</cxf.version>
+                                            <cxf.version>3.0.2</cxf.version>
 	</properties>
+        
+        
+        
 
 	<dependencies>
 		<dependency>
@@ -48,7 +56,40 @@
 			<artifactId>scala-library</artifactId>
 			<version>2.11.0</version>
 		</dependency>
+                
+                                           <!-- Dépendance qui va nous permetttre de tester le batch -->
+                                            <dependency>
+                                                                <groupId>org.awaitility</groupId>
+                                                                <artifactId>awaitility</artifactId>
+                                                                <version>3.1.6</version>
+                                                                <scope>test</scope>
+                                            </dependency>
+                                            
+                                            <!-- JUnit 5 -->
+                                           <dependency>
+                                                               <groupId>org.junit.jupiter</groupId>
+                                                               <artifactId>junit-jupiter-api</artifactId>
+                                                               <version>5.5.0-M1</version>
+                                                               <scope>test</scope>
+                                           </dependency>
+	 <dependency>
+	  <groupId>org.springframework</groupId>
+	  <artifactId>spring-test</artifactId>
+	  <version>5.0.8.RELEASE</version>
+	  <scope>test</scope>
+	  <type>jar</type>
+	 </dependency>
+	 <dependency>
+	  <groupId>org.springframework.boot</groupId>
+	  <artifactId>spring-boot-test</artifactId>
+	  <version>2.0.4.RELEASE</version>
+	  <scope>test</scope>
+	  <type>jar</type>
+	 </dependency>
 	</dependencies>
+        
+        
+        
 	
 	<build>
 		<plugins>

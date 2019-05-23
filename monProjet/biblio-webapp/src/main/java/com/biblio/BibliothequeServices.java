@@ -359,6 +359,68 @@ public class BibliothequeServices extends AbstractResource {
            
 
                }
+           
+           
+           /**
+     *
+     * @param prolonger
+     * @param cloturationPret
+     * @param dureePret
+     * @param refPret
+     * @return
+     */
+    @WebMethod(operationName = "updatePret")
+           public PretResponse doUpdatePret( 
+                                                                             @WebParam(name="dureepret") String dureePret,
+                                                                             @WebParam(name="prolonger") boolean prolonger ,
+                                                                             @WebParam(name="cloturationpret") boolean cloturationPret,
+                                                                             @WebParam(name="refpret") int refPret) {
+               
+                   
+           Pret pret = new Pret(); 
+           PretResponse response = new PretResponse();
+           
+           Date datePret = new Date();
+                      
+                      Calendar c = Calendar.getInstance();
+                      c.setTime(datePret);
+                      
+                      c.add(Calendar.MONTH, 1);
+                      
+                      Date dateFinPret = c.getTime();
+               
+              
+               
+               try{
+               
+               pret.setRefPret(refPret);
+               pret.setDatePret(datePret);
+               pret.setDureePret(dureePret);
+               pret.setDateFinPret(dateFinPret);
+               pret.setProlonger(prolonger);
+               pret.setCloturationPret(cloturationPret);
+
+                       
+               response.setRefPret(refPret);
+               response.setDatePret(datePret);
+               response.setDureePret(dureePret);
+               response.setDateFinPret(dateFinPret);
+               response.setProlonger(prolonger);
+               response.setCloturationPret(cloturationPret);
+
+
+               } catch (Exception e){
+                   e.printStackTrace();
+               }
+               
+               
+               pretDao.updatePret(pret);
+               
+               return response;
+           
+
+               
+           }
 
 
            

@@ -44,6 +44,7 @@ com\biblio\ClientResponse.class
 com\biblio\DoLoginResponse.class
 com\client\action\LoginAction.class
 com\biblio\UtilisateurResponse.class
+com\biblio\UpdatePret.class
 com\biblio\AddUserResponse.class
 com\biblio\InterruptedException.class
 com\biblio\ObjectFactory.class
@@ -56,4 +57,5 @@ com\biblio\BibliothequeServicesService.class
 com\client\interceptors\AuthInterceptor.class
 com\biblio\InfoPretResponse.class
 com\client\interceptors\EmployeAuthInterceptor.class
+com\biblio\UpdatePretResponse.class
 com\biblio\ListInfoDocumentResponse.class

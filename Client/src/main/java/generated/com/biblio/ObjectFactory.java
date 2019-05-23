@@ -57,7 +57,9 @@ public class ObjectFactory {
     private final static QName _SearchBiblioResponse_QNAME = new QName("http://biblio.com/", "searchBiblioResponse");
     private final static QName _AddBiblioResponse_QNAME = new QName("http://biblio.com/", "addBiblioResponse");
     private final static QName _AddPretResponse_QNAME = new QName("http://biblio.com/", "addPretResponse");
+    private final static QName _UpdatePretResponse_QNAME = new QName("http://biblio.com/", "updatePretResponse");
     private final static QName _ClientResponse_QNAME = new QName("http://biblio.com/", "ClientResponse");
+    private final static QName _UpdatePret_QNAME = new QName("http://biblio.com/", "updatePret");
     private final static QName _DeleteClientResponse_QNAME = new QName("http://biblio.com/", "deleteClientResponse");
     private final static QName _AddClient_QNAME = new QName("http://biblio.com/", "addClient");
     private final static QName _AddUser_QNAME = new QName("http://biblio.com/", "addUser");
@@ -76,6 +78,14 @@ public class ObjectFactory {
      */
     public ClientResponse createClientResponse() {
         return new ClientResponse();
+    }
+
+    /**
+     * Create an instance of {@link UpdatePret }
+     * 
+     */
+    public UpdatePret createUpdatePret() {
+        return new UpdatePret();
     }
 
     /**
@@ -140,6 +150,14 @@ public class ObjectFactory {
      */
     public AddPretResponse createAddPretResponse() {
         return new AddPretResponse();
+    }
+
+    /**
+     * Create an instance of {@link UpdatePretResponse }
+     * 
+     */
+    public UpdatePretResponse createUpdatePretResponse() {
+        return new UpdatePretResponse();
     }
 
     /**
@@ -672,12 +690,30 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link UpdatePretResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://biblio.com/", name = "updatePretResponse")
+    public JAXBElement<UpdatePretResponse> createUpdatePretResponse(UpdatePretResponse value) {
+        return new JAXBElement<UpdatePretResponse>(_UpdatePretResponse_QNAME, UpdatePretResponse.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ClientResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://biblio.com/", name = "ClientResponse")
     public JAXBElement<ClientResponse> createClientResponse(ClientResponse value) {
         return new JAXBElement<ClientResponse>(_ClientResponse_QNAME, ClientResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link UpdatePret }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://biblio.com/", name = "updatePret")
+    public JAXBElement<UpdatePret> createUpdatePret(UpdatePret value) {
+        return new JAXBElement<UpdatePret>(_UpdatePret_QNAME, UpdatePret.class, null, value);
     }
 
     /**

@@ -212,6 +212,18 @@
           <result name="input" >WEB-INF/jsp/deletePret.jsp</result>
           <result name="success" >WEB-INF/jsp/accueilEmploye.jsp</result>
      </action>
+     
+     
+     <action name="updatePret">
+            <result>WEB-INF/jsp/updatePret.jsp</result>
+        </action>
+        
+        <action name="majPret"
+                     class="com.client.action.PretAction"
+                     method="doMajPret">
+          <result name="input" >WEB-INF/jsp/updatePret.jsp</result>
+          <result name="success" >WEB-INF/jsp/accueilEmploye.jsp</result>
+     </action>
       
       
                               <!--  BASE CLIENT  -->

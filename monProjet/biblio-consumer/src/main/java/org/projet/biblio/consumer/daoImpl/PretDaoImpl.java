@@ -156,9 +156,37 @@ public class PretDaoImpl extends AbstractDaoImpl implements PretDao {
 	public void deletePretPicture(Pret pret) {
 
 	}
+        
+        
+        
+        
 
                     @Override
 	public void updatePret(Pret pret) {
+            
+                        JdbcTemplate jdbcTemplate =  getJdbcTemplate();
+
+                                       /* Méthode UPDATE pour ajouter un employé*/
+
+                                      String sql = "UPDATE pret SET datepret = ?, dureepret = ?, datefinpret = ?, prolonger = ?, cloturationpret = ?  WHERE  refpret = ?";
+
+		
+
+	               Object[] args = new Object[] {pret.getDatePret(), pret.getDureePret(), pret.getDateFinPret(), pret.isProlonger(), pret.isCloturationPret(), pret.getRefPret()};
+
+
+                                        try {
+                           
+
+                                        jdbcTemplate.update(sql, args);
+
+                                        }catch (EmptyResultDataAccessException exception) {
+
+                                       System.out.println("Incorrect");
+
+
+                                        }
+                     
 
 	}
         

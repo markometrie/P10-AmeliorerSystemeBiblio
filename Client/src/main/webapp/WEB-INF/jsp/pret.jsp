@@ -86,6 +86,11 @@
                        <input type="button" value="Ajoutez un prêt"> </a>
                       </div>
                        
+                       <div class="boutonModifier">
+                       <a href="${pageContext.request.contextPath}/updatePret" target="_blank"> 
+                       <input type="button" value="Modifier un prêt"> </a>
+                      </div>
+                       
                        
                        <div class="boutonSupp">
                        <a href="${pageContext.request.contextPath}/deletePret" target="_blank"> 

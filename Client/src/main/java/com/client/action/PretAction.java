@@ -345,6 +345,44 @@ public class PretAction extends ActionSupport {
                       return vResult;
                           
                       }
+                      
+                      
+                      public String doMajPret() {
+                          
+                          
+                          
+                      BibliothequeServicesService bibliothequeServicesService= new BibliothequeServicesService();             
+                      BibliothequeServices port =  bibliothequeServicesService.getBibliothequeServicesPort();
+                      
+                      String vResult = ActionSupport.INPUT;
+
+                      PretResponse pretResponse = new PretResponse();
+
+                      pretResponse.setRefpret(refpret);
+                      pretResponse.setCloturationpret(cloturationpret);
+                      pretResponse.setProlonger(prolonger);
+                      
+                                                    
+                      
+                      try {
+                          
+                      if (!StringUtils.isAllEmpty(dureePret)) {
+                      port.updatePret(dureePret, prolonger, cloturationpret, refpret);
+                      
+                      vResult = ActionSupport.SUCCESS;        
+                      
+                      }
+                      
+                      } catch (Exception pe) {
+                        this.addActionError("Veuillez remplir les champs correctement");
+
+                      }
+     
+                      
+                      return vResult;
+                          
+                      }
+                      
 
 
                       }
