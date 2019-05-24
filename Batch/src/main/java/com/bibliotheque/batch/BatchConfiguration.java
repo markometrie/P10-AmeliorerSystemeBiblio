@@ -23,31 +23,26 @@ import org.springframework.batch.core.repository.JobRepository;
 import org.springframework.batch.core.repository.JobRestartException;
 
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
-import org.springframework.stereotype.Component;
 
 
 
 @Configuration
 @EnableBatchProcessing
 @EnableScheduling
-@Component
-@ComponentScan("com.baeldung.scheduled")
 public class BatchConfiguration {
     
-    private final AtomicInteger compteur = new AtomicInteger(0);
 
     /*
     Nous configurons notre Scheduler avec Cron qui 
     va nous permettre de lancer le batch
     du lundi au vendredi à 6h30 du matin
     */
-    @Scheduled(fixedDelay = 2*60*1000 )
-//  @Scheduled(cron = "5 30 6 * * 1-5")
+//    @Scheduled(fixedDelay = 2*60*1000 )
+  @Scheduled(cron = "5 30 6 * * 1-5")
    public void fixedRateSch() throws JobExecutionAlreadyRunningException, JobRestartException, JobInstanceAlreadyCompleteException, JobParametersInvalidException {
        
        
@@ -55,10 +50,14 @@ public class BatchConfiguration {
         .addLong("currentTime", new Long(System.currentTimeMillis()))
         .toJobParameters();
       
-      /*
-      Nous incrementons de 1 à chaque appel de la méthode
-      */
-      this.compteur.incrementAndGet();
+      SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
+        
+                Date now = new Date();
+      
+                String strDate = sdf.format(now);
+      
+                System.out.println("Fixed Rate scheduler:: " + strDate);
+      
 
       
       //********************************************************************************************
@@ -111,9 +110,9 @@ public class BatchConfiguration {
                                            return nomOuvrage
                                            return Email
                                            */                     
-                                            EmailsUtils.sendEmail(infoPretResponse.getEmail(), SUBJECT, "Bonjour ,  \n vous avez enpruntÃ© le livre :" + infoPretResponse.getNomouvrage() + " " +
-                                                                                                                                                                 "pendant une pÃ©riode supÃ©rieur Ã  4 semaines. \n\n"
-                                                                                                                                                              + "Vous Ãªtes donc priÃ© de restituer votre prÃªt dans votre bibliothÃ¨que.\n" +
+                                            EmailsUtils.sendEmail(infoPretResponse.getEmail(), SUBJECT, "Bonjour ,  \n vous avez enprunté(e) le livre :" + infoPretResponse.getNomouvrage() + " " +
+                                                                                                                                                                 "pendant une période supérieur Ã  4 semaines. \n\n"
+                                                                                                                                                              + "Vous êtes donc prié(e) de restituer votre prêt dans votre bibliothèque.\n" +
                                                                                                                                                                   "Cordialement, \n" +
                                                                                                                                                                   "La direction"); 
                                       
@@ -121,11 +120,6 @@ public class BatchConfiguration {
 		
 	                      }
                              
-                             
-                             public int getInvocationCompteur() {
-                                 
-                                 return this.compteur.get();
-                             }
       
 
                             

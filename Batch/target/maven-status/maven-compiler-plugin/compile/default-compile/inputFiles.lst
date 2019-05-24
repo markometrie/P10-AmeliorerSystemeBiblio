@@ -17,6 +17,7 @@ D:\OP\P10 - AmeliorerSystemBiblio\Batch\src\main\java\generated\com\biblio\Delet
 D:\OP\P10 - AmeliorerSystemBiblio\Batch\src\main\java\com\bibliotheque\batch\WSUtils.java
 D:\OP\P10 - AmeliorerSystemBiblio\Batch\src\main\java\generated\com\biblio\SearchPretResponse.java
 D:\OP\P10 - AmeliorerSystemBiblio\Batch\src\main\java\generated\com\biblio\SearchBiblioResponse.java
+D:\OP\P10 - AmeliorerSystemBiblio\Batch\src\main\java\generated\com\biblio\UpdatePret.java
 D:\OP\P10 - AmeliorerSystemBiblio\Batch\src\main\java\generated\com\biblio\AddDocument.java
 D:\OP\P10 - AmeliorerSystemBiblio\Batch\src\main\java\generated\com\biblio\BibliothequeResponse.java
 D:\OP\P10 - AmeliorerSystemBiblio\Batch\src\main\java\generated\com\biblio\InfoPretResponse.java
@@ -44,6 +45,7 @@ D:\OP\P10 - AmeliorerSystemBiblio\Batch\src\main\java\com\bibliotheque\batch\Bat
 D:\OP\P10 - AmeliorerSystemBiblio\Batch\src\main\java\generated\com\biblio\DeleteClient.java
 D:\OP\P10 - AmeliorerSystemBiblio\Batch\src\main\java\generated\com\biblio\DoLoginResponse.java
 D:\OP\P10 - AmeliorerSystemBiblio\Batch\src\main\java\generated\com\biblio\AddUser.java
+D:\OP\P10 - AmeliorerSystemBiblio\Batch\src\main\java\generated\com\biblio\UpdatePretResponse.java
 D:\OP\P10 - AmeliorerSystemBiblio\Batch\src\main\java\generated\com\biblio\ListInfoDocument.java
 D:\OP\P10 - AmeliorerSystemBiblio\Batch\src\main\java\com\bibliotheque\batch\EmailsUtils.java
 D:\OP\P10 - AmeliorerSystemBiblio\Batch\src\main\java\generated\com\biblio\AddClientResponse.java

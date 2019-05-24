@@ -40,6 +40,7 @@ com\biblio\ClientResponse.class
 com\biblio\DoLoginResponse.class
 com\biblio\UtilisateurResponse.class
 com\bibliotheque\batch\EmailsUtils.class
+com\biblio\UpdatePret.class
 com\biblio\AddUserResponse.class
 com\biblio\ObjectFactory.class
 com\biblio\BibliothequeServices.class
@@ -47,4 +48,5 @@ com\biblio\BibliothequeResponse.class
 com\biblio\ListDocumentResponse.class
 com\biblio\BibliothequeServicesService.class
 com\biblio\InfoPretResponse.class
+com\biblio\UpdatePretResponse.class
 com\biblio\ListInfoDocumentResponse.class
