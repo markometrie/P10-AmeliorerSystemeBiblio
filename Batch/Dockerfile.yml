@@ -1,0 +1,5 @@
+FROM openjdk:8
+ADD target/mail-batch-0.0.1-SNAPSHOT.jar mail-batch-0.0.1-SNAPSHOT.jar
+EXPOSE 8085
+ENTRYPOINT ["java", "-jar", "mail-batch-0.0.1-SNAPSHOT.jar"]
+
