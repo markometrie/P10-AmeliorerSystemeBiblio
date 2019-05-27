@@ -20,6 +20,6 @@ VALUES(
 'Marko',
 'admin',
 'Rue des templiers',
-'matthieu@gmail.com',
+'matthieu.delomez@gmail.com',
 '59400'
 );

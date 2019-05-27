@@ -2,6 +2,10 @@
 import com.biblio.BibliothequeServices;
 import com.biblio.BibliothequeServicesService;
 import com.biblio.InfoPretResponse;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 
 import java.util.List;
@@ -74,13 +78,16 @@ public class TestBatch {
 
        }
     
-    
+    private DateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
     
     /*
     Méthode qui va nous permettre de check si la date de fin de pret n'est pas egal à la date du jour
     */
     @Test
     public void whenBatchLaunch_GivenCompareTo_ThenEndDateIsGood() {
+        
+        
+        Date date = new Date();
         
          List<InfoPretResponse> listInfoDocument;
         
@@ -92,7 +99,8 @@ public class TestBatch {
         
       try {
             
-        assertFalse("Retourne une Exception si la date de fin du pret est egal à la date du jour",listInfoDocument.stream().filter((InfoPretResponse o) -> o.getDatefinpret().equals(2019-05-24)).findFirst().isPresent());
+        assertFalse("Retourne une Exception si la date de fin du pret est egal à la date du jour",listInfoDocument.stream().filter((InfoPretResponse o) -> o.getDatefinpret().equals(sdf.format(date))).findFirst().isPresent());
+        System.out.println("Date du jour : " + sdf.format(date));
         
         
         } catch (AssertionError ex){
