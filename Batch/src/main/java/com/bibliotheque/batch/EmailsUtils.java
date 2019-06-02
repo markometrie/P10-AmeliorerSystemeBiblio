@@ -14,6 +14,7 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
+ import org.springframework.beans.factory.annotation.Value;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
@@ -32,7 +33,21 @@ public class EmailsUtils {
     
     
 
-                      private static Session session;
+                        private static Session session;
+
+    @Value("${mail.smtp.host}")
+    private static String host;
+
+    @Value("${mail.smtp.port}")
+    private static String port;
+
+    @Value("${mail.noreply.address}")
+    private static String addres;
+
+    @Value("${mail.noreply.password}")
+    private static String password;
+
+    
 
 	private static Properties emailProps;
         
@@ -103,5 +118,3 @@ public class EmailsUtils {
 		}
 	}
 }
-    
-

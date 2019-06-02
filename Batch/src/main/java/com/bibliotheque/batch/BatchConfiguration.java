@@ -41,8 +41,8 @@ public class BatchConfiguration {
     va nous permettre de lancer le batch
     du lundi au vendredi à 6h30 du matin
     */
-//    @Scheduled(fixedDelay = 2*60*1000 )
-  @Scheduled(cron = "5 30 6 * * 1-5")
+   @Scheduled(fixedDelay = 2*60*1000 )
+//  @Scheduled(cron = "5 30 6 * * 1-5")
    public void fixedRateSch() throws JobExecutionAlreadyRunningException, JobRestartException, JobInstanceAlreadyCompleteException, JobParametersInvalidException {
        
        
@@ -64,10 +64,11 @@ public class BatchConfiguration {
       
        
                                             // Recuperation du fichier de configuration sous forme de Properties
-		Properties emailProps = PropsUtils.getProps("src/email.properties");
+                                           
+	//	Properties emailProps = PropsUtils.getProps("src/main/resources/application.properties");
 
 		// Configuration EmailUtils
-		EmailsUtils.setEmailProperties(emailProps);
+	//	EmailsUtils.setEmailProperties(emailProps);
 		
                                            List<InfoPretResponse> listInfoDocument = null ;
                                            
