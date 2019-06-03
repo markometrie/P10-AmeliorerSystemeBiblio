@@ -3,7 +3,7 @@
 <br>
 Parcours: OpenClassrooms - Développeur d'application Java/JEE.
 <br>
-Projet N°7: Développez le système d'information d'une librairie.
+Projet N°10: Améliorez le système d'information de la bibliothèque.
 <br>
 <br>
 
@@ -51,6 +51,12 @@ Projet N°7: Développez le système d'information d'une librairie.
   <li>
     Spring Web 3.0.5
   </li>
+  <li>
+    JUnit 5
+  </li>
+  <li>
+    Spring Boot
+  </li>
   </ul>
   <br>
   
@@ -87,7 +93,7 @@ Projet N°7: Développez le système d'information d'une librairie.
     Possibilité d'effectuer une recherche en fonction du nom d'ouvrage
   </li>
   <li>
-    Suppression et création de nouveau prêt ainsi qu'un historique
+    Cloturation et création de nouveau prêt ainsi qu'un historique
   </li>
   <li>
     Création d'un nouveau compte coté client et employé
@@ -122,6 +128,11 @@ Projet N°7: Développez le système d'information d'une librairie.
     mail.auth.pass=*********** [Mot de Passe]
 
 <br>
+
+Batch lancé automatiquement tout les matins du lundi au vendredi via un Scheduler paramétré dans les configurations du Batch.
+<br>
+Batch déployé sur une image Docker via un Dockerfile.yml situé dans Batch/src/main/docker, possibilité de builder l'image Docker via la commande 'mvn package docker:build' suivi de la commande 'docker run -p 8085:8085 matthieu/mail-batch'
+
 
 # Déploiement
 
