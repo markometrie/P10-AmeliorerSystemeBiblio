@@ -1,176 +1,176 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.bibliotheque</groupId>
-	<artifactId>mail-batch</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+    <groupId>com.bibliotheque</groupId>
+    <artifactId>mail-batch</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
 
-	<name>Batch</name>
-	<description>Send mails with Spring Batch </description>
+    <name>Batch</name>
+    <description>Send mails with Spring Batch </description>
 
 
-                  <!-- Dépendance projet Spring Boot -->
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.3.3.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
-	</parent>
-        
-        
-        
+    <!-- Dépendance projet Spring Boot -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.3.3.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
 
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<java.version>1.8</java.version>
-                                            <cxf.version>3.0.2</cxf.version>
-                                           
-                                            <!-- Configuration Docker-->
-                                           <docker.image.prefix>matthieu</docker.image.prefix>
-                                            
-	</properties>
-        
-        
-        
 
-	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-batch</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-mail</artifactId>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.velocity</groupId>
-			<artifactId>velocity</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.scala-lang</groupId>
-			<artifactId>scala-library</artifactId>
-			<version>2.11.0</version>
-		</dependency>
-                
-                                             <dependency>
-                                                                 <groupId>org.springframework.boot</groupId>
-                                                                 <artifactId>spring-boot-starter-web</artifactId>
-                                             </dependency>
-                                             
-                                             
-<dependency>
-	<groupId>org.springframework</groupId>
-	<artifactId>spring-context</artifactId>
-</dependency>
 
-                
-                                           <!-- Dépendance qui va nous permetttre de tester le batch -->
-                                            <dependency>
-                                                                <groupId>org.awaitility</groupId>
-                                                                <artifactId>awaitility</artifactId>
-                                                                <version>3.1.6</version>
-                                                                <scope>test</scope>
-                                            </dependency>
-                                            
-                                            <!-- JUnit 5 -->
-                                           <dependency>
-                                                               <groupId>org.junit.jupiter</groupId>
-                                                               <artifactId>junit-jupiter-api</artifactId>
-                                                               <version>5.5.0-M1</version>
-                                                               <scope>test</scope>
-                                           </dependency>
-	 <dependency>
-	  <groupId>org.springframework</groupId>
-	  <artifactId>spring-test</artifactId>
-	  <version>5.0.8.RELEASE</version>
-	  <scope>test</scope>
-	  <type>jar</type>
-	 </dependency>
-	 <dependency>
-	  <groupId>org.springframework.boot</groupId>
-	  <artifactId>spring-boot-test</artifactId>
-	  <version>2.0.4.RELEASE</version>
-	  <scope>test</scope>
-	  <type>jar</type>
-	 </dependency>
-	</dependencies>
-        
-        
-        
-	
-	<build>
-		<plugins>
-			
-                        
-        <!--  Config Docker -->                
-        <plugin>
-         <groupId>com.spotify</groupId>
-         <artifactId>docker-maven-plugin</artifactId>
-         <version>1.0.0</version>
-         
-         <configuration>
-            <imageName>${docker.image.prefix}/${project.artifactId}</imageName>
-            <dockerDirectory>src/main/docker</dockerDirectory>
-            <resources>
-               <resource>
-                  <directory>${project.build.directory}</directory>
-                  <include>${project.build.finalName}.jar</include>
-               </resource>
-            </resources>
-         </configuration>
-      </plugin>
-      
-      <plugin>
-         <groupId>org.springframework.boot</groupId>
-         <artifactId>spring-boot-maven-plugin</artifactId>
-      </plugin>
-      
-                        
-                        
-                  <plugin>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
+        <cxf.version>3.0.2</cxf.version>
+
+        <!-- Configuration Docker-->
+        <docker.image.prefix>matthieu</docker.image.prefix>
+
+    </properties>
+
+
+
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-batch</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mail</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-library</artifactId>
+            <version>2.11.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+        </dependency>
+
+
+        <!-- Dépendance qui va nous permetttre de tester le batch -->
+        <dependency>
+            <groupId>org.awaitility</groupId>
+            <artifactId>awaitility</artifactId>
+            <version>3.1.6</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- JUnit 5 -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.5.0-M1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>5.0.8.RELEASE</version>
+            <scope>test</scope>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-test</artifactId>
+            <version>2.0.4.RELEASE</version>
+            <scope>test</scope>
+            <type>jar</type>
+        </dependency>
+    </dependencies>
+
+
+
+
+    <build>
+        <plugins>
+
+
+            <!--  Config Docker -->
+            <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <version>1.0.0</version>
+
+                <configuration>
+                    <imageName>${docker.image.prefix}/${project.artifactId}</imageName>
+                    <dockerDirectory>src/main/docker</dockerDirectory>
+                    <resources>
+                        <resource>
+                            <directory>${project.build.directory}</directory>
+                            <include>${project.build.finalName}.jar</include>
+                        </resource>
+                    </resources>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+
+
+
+            <plugin>
                 <groupId>org.apache.cxf</groupId>
                 <artifactId>cxf-codegen-plugin</artifactId>
                 <version>${cxf.version}</version>
 
-            <executions>  
-                <execution>
-	<id>generate-sources</id>
-	<phase>generate-sources</phase>
-                      <configuration>
-                         <sourceRoot>${basedir}/src/main/java/generated</sourceRoot>
-                      <wsdlOptions>
-	<wsdlOption>
-	   
-                      <wsdl>http://192.168.1.46:8084/bibliotheque/bibliothequeB?wsdl</wsdl>
-           
-	</wsdlOption>
-	</wsdlOptions>
-	</configuration>
-	<goals>
-                     <goal>wsdl2java</goal>
-	</goals>
-	</execution>
-        
-        
-	</executions>
-                </plugin>
-                
-                
-                <plugin>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-compiler-plugin</artifactId>
-    <version>3.8.1</version>
-</plugin>
-            
+                <executions>
+                    <execution>
+                        <id>generate-sources</id>
+                        <phase>generate-sources</phase>
+                        <configuration>
+                            <sourceRoot>${basedir}/src/main/java/generated</sourceRoot>
+                            <wsdlOptions>
+                                <wsdlOption>
+
+                                    <wsdl>http://192.168.1.46:8084/bibliotheque/bibliothequeB?wsdl</wsdl>
+
+                                </wsdlOption>
+                            </wsdlOptions>
+                        </configuration>
+                        <goals>
+                            <goal>wsdl2java</goal>
+                        </goals>
+                    </execution>
+
+
+                </executions>
+            </plugin>
+
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+            </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
@@ -196,10 +196,10 @@
                     </execution>
                 </executions>
             </plugin>
-                        
-                        
-		</plugins>
-	</build>
-	
+
+
+        </plugins>
+    </build>
+
 
 </project>

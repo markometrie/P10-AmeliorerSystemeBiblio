@@ -1,0 +1,6 @@
+FROM java:8
+VOLUME /tmp
+ADD target/mail-batch-0.0.1-SNAPSHOT.jar mail-batch.jar
+EXPOSE 8084
+RUN bash -c 'touch /mail-batch.jar'
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/mail-batch.jar"]

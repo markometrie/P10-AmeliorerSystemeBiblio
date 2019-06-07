@@ -22,6 +22,7 @@ import org.springframework.batch.core.repository.JobInstanceAlreadyCompleteExcep
 import org.springframework.batch.core.repository.JobRepository;
 import org.springframework.batch.core.repository.JobRestartException;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -29,106 +30,105 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 
 
-
 @Configuration
 @EnableBatchProcessing
 @EnableScheduling
 public class BatchConfiguration {
-    
 
+
+    @Value("${mail.noreply.address}")
+    private String addres;
     /*
     Nous configurons notre Scheduler avec Cron qui 
     va nous permettre de lancer le batch
     du lundi au vendredi à 6h30 du matin
     */
-   @Scheduled(fixedDelay = 2*60*1000 )
-//  @Scheduled(cron = "5 30 6 * * 1-5")
-   public void fixedRateSch() throws JobExecutionAlreadyRunningException, JobRestartException, JobInstanceAlreadyCompleteException, JobParametersInvalidException {
-       
-       
-      JobParameters param = new JobParametersBuilder()
-        .addLong("currentTime", new Long(System.currentTimeMillis()))
-        .toJobParameters();
-      
-      SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
-        
-                Date now = new Date();
-      
-                String strDate = sdf.format(now);
-      
-                System.out.println("Fixed Rate scheduler:: " + strDate);
-      
+    @Scheduled(fixedDelay = 1*30*1000 )
+    // @Scheduled(cron = "* * * * * *")
+    public void fixedRateSch() throws JobExecutionAlreadyRunningException, JobRestartException, JobInstanceAlreadyCompleteException, JobParametersInvalidException {
 
-      
-      //********************************************************************************************
-      
-       
-                                            // Recuperation du fichier de configuration sous forme de Properties
-                                           
-	//	Properties emailProps = PropsUtils.getProps("src/main/resources/application.properties");
 
-		// Configuration EmailUtils
-	//	EmailsUtils.setEmailProperties(emailProps);
-		
-                                           List<InfoPretResponse> listInfoDocument = null ;
-                                           
-                
-		try {
-                    
-		 // Recuperation de la liste des clients Dans le web service 
-                 
-                                             BibliothequeServicesService bibliothequeServicesService= new BibliothequeServicesService();      
-                                             BibliothequeServices port =  bibliothequeServicesService.getBibliothequeServicesPort();
-                                            
-                                             
-                                            // Appel Ã  la methode qui va recuperer les mails dont la date de fin de pret est depasse
-                                             
-                                             listInfoDocument = port.listInfoDocument();
-                                                                                                   
-                                            
-		 } catch (Exception e) {
-			e.printStackTrace();
-		}
-                
-		// Envois des email de relance
-                
-		if (listInfoDocument != null) {
-			sendEmail(listInfoDocument);
-		}
-	                      }
-                                           
+        System.out.println("--->>> "+addres);
+        JobParameters param = new JobParametersBuilder()
+                .addLong("currentTime", new Long(System.currentTimeMillis()))
+                .toJobParameters();
 
-                                            private static final String SUBJECT = "BOOK NOT RETURNED";
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
 
-                     
+        Date now = new Date();
 
-	                     private static void sendEmail(List<InfoPretResponse> listInfoPretResponse) {
-                      
-                                            for(InfoPretResponse infoPretResponse : listInfoPretResponse) {
+        String strDate = sdf.format(now);
+
+        System.out.println("Fixed Rate scheduler:: " + strDate);
+
+
+        //********************************************************************************************
+
+
+        // Recuperation du fichier de configuration sous forme de Properties
+        //Properties emailProps = PropsUtils.getProps("src/email.properties");
+
+        // Configuration EmailUtils
+        //EmailsUtils.setEmailProperties(emailProps);
+
+        List<InfoPretResponse> listInfoDocument = null;
+
+
+        try {
+
+            // Recuperation de la liste des clients Dans le web service
+
+            System.out.println("------------>>> Get list document from wsdl" + listInfoDocument);
+            BibliothequeServicesService bibliothequeServicesService = new BibliothequeServicesService();
+            BibliothequeServices port = bibliothequeServicesService.getBibliothequeServicesPort();
+
+
+            // Appel Ã  la methode qui va recuperer les mails dont la date de fin de pret est depasse
+
+            listInfoDocument = port.listInfoDocument();
+            System.out.println("------------------------------------>>>>" + listInfoDocument);
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        // Envois des email de relance
+
+        if (listInfoDocument != null) {
+            sendEmail(listInfoDocument);
+        }
+    }
+
+
+    private static final String SUBJECT = "BOOK NOT RETURNED";
+
+
+    private static void sendEmail(List<InfoPretResponse> listInfoPretResponse) {
+
+        for (InfoPretResponse infoPretResponse : listInfoPretResponse) {
                           
                                             /*
                                            Composition du message
                                            return nomOuvrage
                                            return Email
-                                           */                     
-                                            EmailsUtils.sendEmail(infoPretResponse.getEmail(), SUBJECT, "Bonjour ,  \n vous avez enprunté(e) le livre :" + infoPretResponse.getNomouvrage() + " " +
-                                                                                                                                                                 "pendant une période supérieur Ã  4 semaines. \n\n"
-                                                                                                                                                              + "Vous êtes donc prié(e) de restituer votre prêt dans votre bibliothèque.\n" +
-                                                                                                                                                                  "Cordialement, \n" +
-                                                                                                                                                                  "La direction"); 
-                                      
-                                            }
-		
-	                      }
-                             
-      
+                                           */
+            EmailsUtils.sendEmail(infoPretResponse.getEmail(), SUBJECT, "Bonjour ,  \n vous avez enprunté(e) le livre :" + infoPretResponse.getNomouvrage() + " " +
+                    "pendant une période supérieur Ã  4 semaines. \n\n"
+                    + "Vous êtes donc prié(e) de restituer votre prêt dans votre bibliothèque.\n" +
+                    "Cordialement, \n" +
+                    "La direction");
 
-                            
+        }
 
-	@Bean
-	public SimpleJobLauncher jobLauncher(JobRepository jobRepository) {
-		SimpleJobLauncher launcher = new SimpleJobLauncher();
-		launcher.setJobRepository(jobRepository);
-		return launcher;
-	}
+    }
+
+
+    @Bean
+    public SimpleJobLauncher jobLauncher(JobRepository jobRepository) {
+        System.out.println("----->jobLauncher ");
+        SimpleJobLauncher launcher = new SimpleJobLauncher();
+        launcher.setJobRepository(jobRepository);
+        return launcher;
+    }
 }

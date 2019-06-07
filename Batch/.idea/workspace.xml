@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="800badd1-cce1-4906-80a1-6db5e7dfe2f5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Dockerfile.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliotheque/batch/Batch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibliotheque/batch/Batch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliotheque/batch/BatchConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibliotheque/batch/BatchConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bibliotheque/batch/EmailsUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bibliotheque/batch/EmailsUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/generated/com/biblio/BibliothequeServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/generated/com/biblio/BibliothequeServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/generated/com/biblio/BibliothequeServicesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/generated/com/biblio/BibliothequeServicesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/.netbeans_automatic_build" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/biblio/BibliothequeServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/biblio/BibliothequeServices.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/biblio/BibliothequeServicesService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/biblio/BibliothequeServicesService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bibliotheque/batch/Batch.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bibliotheque/batch/Batch.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bibliotheque/batch/BatchConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bibliotheque/batch/BatchConfiguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bibliotheque/batch/EmailsUtils$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bibliotheque/batch/EmailsUtils$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bibliotheque/batch/EmailsUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bibliotheque/batch/EmailsUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cxf-codegen-plugin-markers/.D6A31C2A240B73A5B6325F1BCBC389FAC79FEB31" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/mail-batch-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/mail-batch-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/mail-batch-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/mail-batch-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/.netbeans_automatic_build" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../monProjet/biblio-batch/target/biblio-batch-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../monProjet/biblio-batch/target/biblio-batch-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../monProjet/biblio-batch/target/classes/.netbeans_automatic_build" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../monProjet/biblio-batch/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../monProjet/biblio-batch/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../monProjet/biblio-batch/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../monProjet/biblio-batch/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../monProjet/biblio-batch/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../monProjet/biblio-batch/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../monProjet/biblio-batch/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../monProjet/biblio-batch/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../monProjet/biblio-batch/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../monProjet/biblio-batch/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../monProjet/biblio-batch/target/surefire-reports/TEST-org.projet.biblio.batch.AppTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../monProjet/biblio-batch/target/surefire-reports/TEST-org.projet.biblio.batch.AppTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../monProjet/biblio-batch/target/surefire-reports/org.projet.biblio.batch.AppTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../monProjet/biblio-batch/target/surefire-reports/org.projet.biblio.batch.AppTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../monProjet/biblio-batch/target/test-classes/.netbeans_automatic_build" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../monProjet/biblio-business/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../monProjet/biblio-business/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../monProjet/biblio-business/src/main/java/org/projet/biblio/business/manager/BibliothequeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../monProjet/biblio-business/src/main/java/org/projet/biblio/business/manager/BibliothequeManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../monProjet/biblio-business/target/biblio-business-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../monProjet/biblio-business/target/biblio-business-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../monProjet/biblio-business/target/classes/.netbeans_automatic_build" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../monProjet/biblio-business/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../monProjet/biblio-business/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../monProjet/biblio-business/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../monProjet/biblio-business/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../monProjet/biblio-business/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../monProjet/biblio-business/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../monProjet/biblio-business/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../monProjet/biblio-business/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../monProjet/biblio-business/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../monProjet/biblio-business/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../monProjet/biblio-business/target/surefire-reports/TEST-org.projet.biblio.business.AppTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../monProjet/biblio-business/target/surefire-reports/TEST-org.projet.biblio.business.AppTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../monProjet/biblio-business/target/surefire-reports/org.projet.biblio.business.AppTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../monProjet/biblio-business/target/surefire-reports/org.projet.biblio.business.AppTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../monProjet/biblio-business/target/test-classes/.netbeans_automatic_build" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../monProjet/biblio-consumer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../monProjet/biblio-consumer/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../monProjet/biblio-consumer/src/main/resources/spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../monProjet/biblio-consumer/src/main/resources/spring.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../monProjet/biblio-consumer/target/biblio-consumer-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../monProjet/biblio-consumer/target/classes/.netbeans_automatic_build" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../monProjet/biblio-consumer/target/classes/spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../monProjet/biblio-consumer/target/classes/spring.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../monProjet/biblio-consumer/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../monProjet/biblio-consumer/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../monProjet/biblio-consumer/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../monProjet/biblio-consumer/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../monProjet/biblio-consumer/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../monProjet/biblio-consumer/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../monProjet/biblio-consumer/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../monProjet/biblio-consumer/target/surefire-reports/TEST-org.projet.biblio.consumer.AppTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../monProjet/biblio-consumer/target/surefire-reports/org.projet.biblio.consumer.AppTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../monProjet/biblio-consumer/target/test-classes/.netbeans_automatic_build" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../monProjet/biblio-model/target/biblio-model-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../monProjet/biblio-model/target/biblio-model-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../monProjet/biblio-model/target/classes/.netbeans_automatic_build" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../monProjet/biblio-model/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../monProjet/biblio-model/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../monProjet/biblio-model/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../monProjet/biblio-model/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../monProjet/biblio-model/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../monProjet/biblio-model/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../monProjet/biblio-model/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../monProjet/biblio-model/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../monProjet/biblio-model/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../monProjet/biblio-model/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../monProjet/biblio-model/target/surefire-reports/TEST-org.projet.biblio.model.AppTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../monProjet/biblio-model/target/surefire-reports/TEST-org.projet.biblio.model.AppTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../monProjet/biblio-model/target/surefire-reports/org.projet.biblio.model.AppTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../monProjet/biblio-model/target/surefire-reports/org.projet.biblio.model.AppTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../monProjet/biblio-model/target/test-classes/.netbeans_automatic_build" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../monProjet/biblio-webapp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../monProjet/biblio-webapp/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../monProjet/biblio-webapp/src/main/java/com/biblio/resources/AbstractResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/../monProjet/biblio-webapp/src/main/java/com/biblio/resources/AbstractResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../monProjet/biblio-webapp/src/main/webapp/META-INF/context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../monProjet/biblio-webapp/src/main/webapp/META-INF/context.xml" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/classes/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="152" column="61" selection-start-line="152" selection-start-column="61" selection-end-line="152" selection-end-column="61" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Dockerfile.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="26" selection-end-line="5" selection-end-column="86" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/docker/Dockerfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliotheque/batch/BatchConfiguration.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="106" lean-forward="true" selection-start-line="106" selection-end-line="106" />
+              <folding>
+                <element signature="e#1372#1397#1" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliotheque/batch/WSUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliotheque/batch/PropsUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliotheque/batch/EmailsUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="77" column="7" selection-start-line="77" selection-start-column="7" selection-end-line="77" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#812#831#1" expanded="true" />
+                <element signature="e#877#896#1" expanded="true" />
+                <element signature="e#942#967#1" expanded="true" />
+                <element signature="e#1015#1041#1" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliotheque/batch/Batch.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="31" column="43" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>sendEmail</find>
+      <find>wsdl</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/com/bibliotheque/batch/Batch.java" />
+        <option value="$PROJECT_DIR$/src/main/docker/Dockerfile.yml" />
+        <option value="$PROJECT_DIR$/src/Dockerfile.yml" />
+        <option value="$PROJECT_DIR$/src/main/docker/Dockerfile" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bibliotheque/batch/BatchConfiguration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bibliotheque/batch/EmailsUtils.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/mail-batch.iml" />
+        <option value="$PROJECT_DIR$/.idea/compiler.xml" />
+        <option value="$PROJECT_DIR$/.idea/misc.xml" />
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/.idea/encodings.xml" />
+        <option value="$PROJECT_DIR$/.idea/modules.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_1_5.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_1_5.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__com_ibm_jbatch_com_ibm_jbatch_tck_spi_1_0.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_mail_javax_mail_1_5_5.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__com_thoughtworks_xstream_xstream_1_4_7.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_2.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_4.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__javax_batch_javax_batch_api_1_0.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_velocity_velocity_1_7.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_0_0.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_awaitility_awaitility_3_1_6.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jettison_jettison_1_2.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_library_1_3.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_hsqldb_hsqldb_2_3_3.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_5_0_M1.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_5_0_M1.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_1_10_19.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_2_6.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_1_1.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_scala_lang_scala_library_2_11_0.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_16.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_16.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_log4j_over_slf4j_1_7_16.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_16.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_batch_spring_batch_core_3_0_6_RELEASE.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_batch_spring_batch_infrastructure_3_0_6_RELEASE.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_1_3_3_RELEASE.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_1_3_3_RELEASE.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_1_3_3_RELEASE.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_batch_1_3_3_RELEASE.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_1_3_3_RELEASE.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_mail_1_3_3_RELEASE.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_1_3_3_RELEASE.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_0_4_RELEASE.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_retry_spring_retry_1_1_2_RELEASE.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_2_5_RELEASE.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_2_5_RELEASE.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_2_5_RELEASE.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_4_2_5_RELEASE.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_2_5_RELEASE.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_2_5_RELEASE.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_2_5_RELEASE.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_0_8_RELEASE.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_2_5_RELEASE.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_16.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__xmlpull_xmlpull_1_1_3_1.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__xpp3_xpp3_min_1_1_4c.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_core_2_3_0.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_impl_2_3_0.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_0.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1680" />
+    <option name="height" value="1050" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="mail-batch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Batch" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mail-batch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Batch" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mail-batch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Batch" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="assembly" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mail-batch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Batch" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mail-batch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Batch" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mail-batch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Batch" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="docker" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mail-batch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Batch" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mail-batch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Batch" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="batch" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mail-batch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Batch" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelOrder2" value="2" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RequestMappingsPanelWidth2" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="restartRequiresConfirmation" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/docker" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/main/docker" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Batch" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="mail-batch" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.bibliotheque.batch.Batch" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="800badd1-cce1-4906-80a1-6db5e7dfe2f5" name="Default Changelist" comment="" />
+      <created>1559003470069</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1559003470069</updated>
+      <workItem from="1559003473083" duration="1178000" />
+      <workItem from="1559046081222" duration="1552000" />
+      <workItem from="1559054839083" duration="3998000" />
+      <workItem from="1559071080222" duration="2159000" />
+      <workItem from="1559244560505" duration="2955000" />
+      <workItem from="1559609055058" duration="3759000" />
+      <workItem from="1559844642715" duration="1845000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="17446000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26800978" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32959184" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32959184" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32857144" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32959184" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info anchor="bottom" id="Version Control" order="13" />
+      <window_info anchor="bottom" id="Java Enterprise" order="14" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring-batch-job.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/context.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvnw.cmd" />
+    <entry file="file://$PROJECT_DIR$/src/mvnw.cmd" />
+    <entry file="file://$PROJECT_DIR$/src/main/docker/Dockerfile.yml" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/email.properties" />
+    <entry file="file://$PROJECT_DIR$/src/Dockerfile.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="26" selection-end-line="5" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/docker/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="152" column="61" selection-start-line="152" selection-start-column="61" selection-end-line="152" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliotheque/batch/WSUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliotheque/batch/Batch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="31" column="43" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliotheque/batch/PropsUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliotheque/batch/EmailsUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="77" column="7" selection-start-line="77" selection-start-column="7" selection-end-line="77" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#812#831#1" expanded="true" />
+            <element signature="e#877#896#1" expanded="true" />
+            <element signature="e#942#967#1" expanded="true" />
+            <element signature="e#1015#1041#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bibliotheque/batch/BatchConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="106" lean-forward="true" selection-start-line="106" selection-end-line="106" />
+          <folding>
+            <element signature="e#1372#1397#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

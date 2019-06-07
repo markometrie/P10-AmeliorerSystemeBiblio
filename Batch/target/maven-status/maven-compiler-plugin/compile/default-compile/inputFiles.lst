@@ -1,11 +1,13 @@
 /home/matthieu/Dev_Java/P10-AmeliorerSystemeBiblio/Batch/src/main/java/generated/com/biblio/AddClientResponse.java
 /home/matthieu/Dev_Java/P10-AmeliorerSystemeBiblio/Batch/src/main/java/generated/com/biblio/UpdatePretResponse.java
+/home/matthieu/Dev_Java/P10-AmeliorerSystemeBiblio/Batch/src/main/java/generated/com/biblio/ListEmailClient.java
 /home/matthieu/Dev_Java/P10-AmeliorerSystemeBiblio/Batch/src/main/java/generated/com/biblio/ClientResponse.java
 /home/matthieu/Dev_Java/P10-AmeliorerSystemeBiblio/Batch/src/main/java/generated/com/biblio/UpdatePret.java
 /home/matthieu/Dev_Java/P10-AmeliorerSystemeBiblio/Batch/src/main/java/generated/com/biblio/package-info.java
 /home/matthieu/Dev_Java/P10-AmeliorerSystemeBiblio/Batch/src/main/java/generated/com/biblio/DeletePret.java
 /home/matthieu/Dev_Java/P10-AmeliorerSystemeBiblio/Batch/src/main/java/generated/com/biblio/DeleteUserResponse.java
 /home/matthieu/Dev_Java/P10-AmeliorerSystemeBiblio/Batch/src/main/java/generated/com/biblio/DeleteClient.java
+/home/matthieu/Dev_Java/P10-AmeliorerSystemeBiblio/Batch/src/main/java/generated/com/biblio/ListEmailClientResponse.java
 /home/matthieu/Dev_Java/P10-AmeliorerSystemeBiblio/Batch/src/main/java/generated/com/biblio/AddPret.java
 /home/matthieu/Dev_Java/P10-AmeliorerSystemeBiblio/Batch/src/main/java/generated/com/biblio/ObjectFactory.java
 /home/matthieu/Dev_Java/P10-AmeliorerSystemeBiblio/Batch/src/main/java/generated/com/biblio/AddDocument.java

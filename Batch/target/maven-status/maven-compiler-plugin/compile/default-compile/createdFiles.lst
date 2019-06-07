@@ -21,6 +21,7 @@ com/biblio/ListClient.class
 com/bibliotheque/batch/PropsUtils.class
 com/biblio/DocumentResponse.class
 com/bibliotheque/batch/EmailsUtils$1.class
+com/biblio/ListEmailClientResponse.class
 com/biblio/DeleteClientResponse.class
 com/biblio/DeletePretResponse.class
 com/biblio/DoLoginClientResponse.class
@@ -48,3 +49,4 @@ com/bibliotheque/batch/Batch.class
 com/biblio/InfoPretResponse.class
 com/biblio/DoLoginResponse.class
 com/biblio/SearchPretResponse.class
+com/biblio/ListEmailClient.class
